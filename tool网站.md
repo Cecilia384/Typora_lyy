@@ -4,3 +4,7 @@
 
 3.[redis](https://app.redislabs.com/#/subscriptions/subscription/2148927/bdb)
 
+4.[cqc的一键翻译](https://what-is-me.github.io/WordListEnquiry/Search.html)
+
+5.键盘拼词练习
+
