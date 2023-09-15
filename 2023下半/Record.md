@@ -1,4 +1,4 @@
-==**！！学习过程写博客自己整理记录EVERDAY！！**==
+git==**！！学习过程写博客自己整理记录EVERDAY！！**==
 
 
 
@@ -648,3 +648,10 @@ daily
 [js_course](https://www.bilibili.com/video/BV145411D7QL?p=10&spm_id_from=pageDriver&vd_source=8539000814a4ae2faefd4a32086c5afc)
 
 (10p /day --> 10day fin)
+
+
+
+（坑）使用git push没有报错，但是远程仓库没有更新的问题
+
+[csdn](https://blog.csdn.net/qq_36838191/article/details/87875080?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-87875080-blog-106007674.235^v38^pc_relevant_sort_base3&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
+
