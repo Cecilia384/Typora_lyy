@@ -1,0 +1,227 @@
+[TOC]
+
+
+
+# 生日
+
+## 题目描述
+
+cjf 君想调查学校 OI 组每个同学的生日，并按照年龄从大到小的顺序排序。但 cjf 君最近作业很多，没有时间，所以请你帮她排序。
+
+## 输入格式
+
+输入共有 $2$ 行，
+
+第 $1$ 行为 OI 组总人数 $n$；
+
+第 $2$ 行至第 $n+1$ 行分别是每人的姓名 $s$、出生年 $y$、月 $m$、日 $d$。
+
+## 输出格式
+
+输出共有 $n$ 行，
+
+即 $n$ 个生日从大到小同学的姓名。（如果有两个同学生日相同，输入靠后的同学先输出）
+
+## 样例 #1
+
+### 样例输入 #1
+
+```
+3
+Yangchu 1992 4 23
+Qiujingya 1993 10 13
+Luowen 1991 8 1
+```
+
+### 样例输出 #1
+
+```
+Luowen
+Yangchu
+Qiujingya
+```
+
+## 提示
+
+数据保证，$1<n<100$，$1\leq |s|<20$。保证年月日实际存在，且年份 $\in [1960,2020]$。
+
+
+
+## KEY
+
+==**结构体数组排序**==
+
+#### 题解1 c++
+
+~~~c++
+#include<iostream>
+#include<algorithm>
+#include<string>
+
+using namespace std;
+struct Person
+{
+	int code;
+	string name;
+	string birthday;
+}person[100];
+int n;
+
+bool compare(const Person& a, const Person& b)
+{
+	if (a.birthday < b.birthday || a.birthday == b.birthday && a.code>b.code)
+		return true;
+	else
+		return false;
+}
+
+int main()
+{
+	string year, month, day;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		person[i].code = i;
+		cin >> person[i].name >> year >> month >> day;
+		if (month.length() == 2 && day.length() == 2)
+			person[i].birthday = year + month + day;
+		else if (month.length() == 1 && day.length() == 2)
+			person[i].birthday = year + '0' + month + day;
+		else if (month.length() == 2 && day.length() == 1)
+			person[i].birthday = year + month + '0' + day;
+		else if (month.length() == 1 && day.length() == 1)
+			person[i].birthday = year + '0' + month + '0' + day;
+	}
+	sort(person, person + n, compare);
+	for (int i = 0; i < n; i++)
+		cout << person[i].name << endl;
+	return 0;
+}
+
+~~~
+
+~~~c++
+------------ 
+------------
+#include<bits/stdc++.h> //万能头文件 
+using namespace std;    
+struct data    //定义data结构体
+{    
+    string name;  
+    long long sum;   
+}a[10001];    
+bool cmp(const data & a,const data & b)  //设 bool cmp为排序关键字  
+{      
+    if (a.sum<b.sum) return 1; //return 1或true 
+    return 0;    //return 0或false
+}    
+int main()    
+{    
+    int n,x,y,z;  //定义变量  
+    cin>>n;    
+    for(int i=1;i<=n;i++)    
+    {cin>>a[i].name>>x>>y>>z;
+     a[i].sum=x*10000000+y*100000+z*1000+100-i;//过程 ???没看懂这一步
+    }  
+    sort(a+1,a+n+1,cmp);  //快排  
+    for (int i=1;i<=n;i++)    
+     cout<<a[i].name<<endl; //按照题目所输出即可
+     return 0; //完美结束！！！
+}
+~~~
+
+
+
+
+
+#### 题解2java
+
+~~~java
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Main m = new Main();
+		m.handleInput();
+	}
+
+	int n = 0;
+
+	List<Student> aList = new ArrayList<Main.Student>();
+
+	public void handleInput() {
+		Scanner in = new Scanner(System.in);
+
+		if (in.hasNext()) {
+			n = in.nextInt();
+		}
+
+		for (int i = 0; i < n; i++) {
+			aList.add(new Student(in.next().trim(), in.nextInt(), in.nextInt(), in.nextInt(), i));
+		}
+		Collections.sort(aList);
+
+		for (Student s : aList) {
+			System.out.println(s.toString());
+		}
+
+	}
+
+	class Student implements Comparable<Student> {
+		String name = null;
+		int year = 0;
+		int month = 0;
+		int day = 0;
+		int number = 0;
+
+		public Student(String name, int year, int month, int day, int number) {
+			// TODO Auto-generated constructor stub
+			this.name = name;
+			this.year = year;
+			this.month = month;
+			this.day = day;
+			this.number = number;
+		}
+
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return name;
+		}
+
+		@Override
+		public int compareTo(Student o) {
+			// TODO Auto-generated method stub
+			if (this.year > o.year) {
+				return 1;
+			}
+			if (this.year < o.year) {
+				return -1;
+			}
+			if (this.month > o.month) {
+				return 1;
+			}
+			if (this.month < o.month) {
+				return -1;
+			}
+			if (this.day > o.day) {
+				return 1;
+			}
+			if (this.day < o.day) {
+				return -1;
+			}
+			if (this.number < o.number) {
+				return 1;
+			}
+			if (this.number > o.number) {
+				return -1;
+			}
+			return 0;
+		}
+
+	}
+}
+
+~~~
+

@@ -1,0 +1,120 @@
+[TOC]
+
+
+
+# A梦中的统计
+
+### 题目背景
+
+Bessie 处于半梦半醒的状态。过了一会儿，她意识到她在数数，不能入睡。
+
+### 题目描述
+
+Bessie 的大脑反应灵敏，仿佛真实地看到了她数过的一个又一个数。她开始注意每一个数码（$0 \ldots 9$）：每一个数码在计数的过程中出现过多少次？
+
+给出两个整数 $M$ 和 $N$，求在序列 $[M, M + 1, M + 2, \ldots, N - 1, N]$ 中每一个数码出现了多少次。
+
+### 输入格式
+
+第 $1$ 行: 两个用空格分开的整数 $M$ 和 $N$。
+
+### 输出格式
+
+第 $1$ 行: 十个用空格分开的整数，分别表示数码 $0 \ldots 9$ 在序列中出现的次数。
+
+### 样例 #1
+
+### 样例输入 #1
+
+```
+129 137
+```
+
+### 样例输出 #1
+
+```
+1 10 2 9 1 1 1 1 0 1
+```
+
+### 提示
+
+数据保证，$1 \leq M \leq N \leq 2 \times 10^9$​，$N-M \leq 5 \times 10^5$
+
++++
+
+
+
+>**KEY**
+>
+>**利用取模拆数**
+
+## AC代码
+
+~~~c++
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	 int m,n;
+     int p;
+     cin>>m>>n;
+     int ans[10];
+     memset(ans,0,sizeof(ans));
+     for(int i=m;i<=n;i++){
+        int t=i;
+         while( t>0 ){
+            p=t%10;
+   	        t/=10;
+            ans[p]++;
+          }
+     }
+     for(int i=0;i<10;i++){
+        printf("%d ",ans[i]);
+     }
+	return 0;
+} 
+~~~
+
+### Else ways
+
+- 用字符流**stringstream**接受输入的数，定义一个字符串取字符流中的数据，最后利用count（）函数统计字符串中每个字符出现的次数
+
+  原文如下
+  
+  >下面要介绍一下解题需要用到的东西：
+  >
+  >    stringstream是字符流，用于接收数字，使用它需要加头文件 sstream；但是字符流是不能直接输出的，需要用到stringstream类的成员函数str() 才能把它当作普通字符串来用，例如：string s = ss.str();
+  >    count是用统计某一给定值出现的次数，count ( ivec.begin(), ivec.end(), value) ，前两个参数是迭代器，第3个参数是要统计的值。可以把它理解为统计给定的值 在一个数组的首位到末位 出现的次数。当然，使用count函数也需要包含头文件 < algorithm >
+  >————————————————
+  >原文链接：https://blog.csdn.net/javemalloc/article/details/123482255
+  >
+  >~~~c++
+  >#include <iostream>
+  >#include <cstdio>
+  >#include <sstream>
+  >#include <string>
+  >#include <algorithm>
+  >using namespace std;
+  >int main()
+  >{
+  >	int m, n;
+  >	cin >> m >> n;
+  >	stringstream ss;
+  >	for (int i = m; i <= n; ++i) {
+  >		ss << i;
+  >	}
+  >	string s = ss.str();
+  >	for (int i = 0; i < 10; ++i) {
+  >		cout << count(s.begin(), s.end(), i+'0');
+  >        //count ( ivec.begin(), ivec.end(), value)
+  >		if (i != 9) {
+  >			cout << " ";
+  >		}
+  >	}
+  >	return 0;
+  >}
+  >
+  >~~~
+  >
+  >
+  
+  
