@@ -223,14 +223,7 @@ int main ()
 
  
 
-#### 8.22
-
-(真是隔了一个月没学习了……愧疚感促使行动力了hhh)
-
-- 下载visual studio和unity（不知道为什么unity学生认证一直不行呜呜）
-- 在.NET上使用c#， 看着例子学了基本的操作（和JAVA GUI好像
-- unity入门（未完成
-- 决定选题（未
+- 
 
 
 
@@ -566,10 +559,11 @@ int main() {
         
         git config --global --unset https.proxy
 
-
-
-
 [csdn](https://blog.csdn.net/Skybububu/article/details/132379910)
+
+
+
+(坑)
 
 > 2.fatal: unable to access 'https://github.com/Cecilia384/gamemaker_1.git/': 
 >
@@ -588,7 +582,7 @@ git push origin master
 
 ```
 
-
+(坑)
 
 > 3.Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.
 
@@ -651,7 +645,39 @@ daily
 
 
 
-（坑）使用git push没有报错，但是远程仓库没有更新的问题
+坑）使用git push没有报错，但是远程仓库没有更新的问题
 
 [csdn](https://blog.csdn.net/qq_36838191/article/details/87875080?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-87875080-blog-106007674.235^v38^pc_relevant_sort_base3&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 
+
+
+(坑)github master分支迁移到main分支
+
+[csdn](https://blog.csdn.net/weixin_46306232/article/details/126546485?spm=1001.2101.3001.4242.3&utm_relevant_index=5)
+
+
+
+(坑)git commit -m""之后GitHub没更新
+
+> 只是上传到了本地库，没有push到GitHub里
+>
+> solve-> git push -u origin main
+
+
+
+#### *9.18*
+
+（坑）git：CRLF will be replaced by LF the next time Git touches it
+
+[csdn](https://blog.csdn.net/LiuJia20010827/article/details/131551172)
+
+> 当 Git 发现你的文件中存在换行符格式的改变时，会给出这样的警告信息。在这种情况下，你可以使用以下命令将文件的换行符格式从 CRLF 转换为 LF：
+>
+> `git config --global core.autocrlf input`
+>
+> 这个命令将全局配置的 core.autocrlf 属性设置为 input，这意味着在提交文件时，Git 会将 CRLF 转换为 LF。 这也是一种推荐的方式，因为 LF 是 Unix 风格的换行符，而大多数版本控制系统（包括 Git）都更喜欢使用 LF。
+>
+> 注意，这个命令会影响所有的 Git 仓库。如果你只想对当前仓库生效，可以将 --global 参数去掉。
+>
+> 修改完配置后，可以尝试再次提交文件，看是否还会出现警告信息。
+>  
