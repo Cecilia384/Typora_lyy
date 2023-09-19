@@ -97,7 +97,7 @@
 
 
 
-#### 9.1
+### 9.1
 
  Q:请解释
 
@@ -133,7 +133,7 @@ if(isNaN(x)||x.replace(/(^\s*)|(\s*$)/g,"")==""){
 }
 ```
 
-js basic 
+#### js basic 
 
 ````js
 var obj =new Object();//创建一个空对象
@@ -227,7 +227,7 @@ Document Obeject Model
 
 > POM Projecr Obeject Model
 
-9.15
+### 9.15
 
 ````javascript
 //How to accept user input in JavaScript
@@ -296,4 +296,183 @@ document.getElementById("submitButton").onclick=function() {
 
 
 console.log("side C:",c);
+
+
+
+9.19
+
+#### [maven教程](https://www.liaoxuefeng.com/wiki/1252599548343744/1255945359327200)
+
+intro
+
+> Maven是一个Java项目管理和构建工具，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建，是Java项目不可缺少的工具。
+
+#### [Log4j](https://logging.apache.org/log4j/2.x/)
+
+
+
+intro
+
+> log4j是一个流行的==Java日志记录框架==。它提供了灵活性和可配置性，使开发人员能够进行高效的日志记录和跟踪。
+>
+> log4j的关键特性包括：
+>
+> 1. 日志分级：log4j 支持不同级别的日志，如调试（DEBUG）、信息（INFO）、警告（WARN）、错误（ERROR）和致命（FATAL）。通过设置适当的日志级别，可以根据应用程序的需求灵活控制日志输出。
+>
+> 2. 输出格式：log4j 可以根据配置将日志输出为各种格式，如简单文本、JSON、XML 等。它还支持自定义输出格式，可以根据需求进行定制。
+>
+> 3. 日志组织和过滤：log4j 可以根据不同的标准来组织和过滤日志。它允许按类、包、时间戳等维度进行过滤。您可以根据自己的需求配置不同类型的过滤器以获取想要的日志信息。
+>
+> 4. 日志输出位置：log4j 可以将日志输出到各种目标，如控制台、文件、数据库等。您可以选择性地配置一个或多个输出位置。
+>
+> 5. 异常处理：log4j 可以捕获和记录应用程序中的异常。每当异常发生时，它将会生成一个包含错误信息和堆栈跟踪的日志记录。这有助于调试和查找问题。
+>
+> 6. 灵活的配置：log4j 提供了配置文件（如 XML 或属性文件）来定义日志记录器、日志输出和其他属性。配置文件可以被动态更改而无需重新编译或重新部署应用程序。
+>
+> 总之，log4j是一个功能强大且易于使用的日志记录框架，已被广泛应用于Java应用程序的日志记录和跟踪中。通过使用log4j，开发人员可以轻松地获得高质量的日志，并更好地了解和排除应用程序中的问题。
+
+
+
+#### [commos logging](https://commons.apache.org/proper/commons-logging/)
+
+intro
+
+> Commons Logging是一个用于在==Java应用程序中实现日志记录的通用日志接口。==它为开发人员提供了一种友好且统一的方式来管理不同日志系统的实现。
+>
+> Commons Logging的特点如下：
+>
+> 1. 抽象接口：Commons Logging提供了一个抽象的Logger接口，开发人员可以使用此接口来记录日志。这使得应用程序可以独立于底层的日志具体实现。
+>
+> 2. 透明的日志实现：Commons Logging可以使用多个日志实现，包括内置的SimpleLog（仅用于开发和调试），以及常见的日志框架如Log4j，JDK Logging等。通过配置适当的类路径和配置文件，开发人员可以轻松切换日志实现，而无需对代码进行更改。
+>
+> 3. 自动发现和适配：Commons Logging支持自动发现具体的日志实现。它会尝试使用当前环境中存在的所有已知日志实现，并选择适用的实现。这降低了使用和迁移的复杂性。
+>
+> 4. 日志级别：Commons Logging支持日志级别的定义和控制。您可以使用级别如DEBUG，INFO，WARN和ERROR来控制日志输出的详细程度。这有助于在不同环境中灵活地配置和过滤要输出的信息。
+>
+> 5. 运行时调整：Commons Logging支持通过更改配置文件动态地调整日志级别。这意味着您可以在不重新编译或重新部署应用程序的情况下更改日志级别，从而有助于故障排除和调试。
+>
+> 总的来说，Commons Logging赋予了开发人员在Java应用程序中使用日志记录的灵活性和可移植性。它提供了一个简单的接口和对常见日志实现的透明支持，使得日志记录变得高效、可配置和易于管理。
+
+
+
+### 9.19
+
+##### （坑）npm报错
+
+1.npm ERR! code E403
+
+> [csdn](https://blog.csdn.net/qq_35664065/article/details/122977681)
+
+2.取消镜像
+
+`npm config set registry https://registry.npmjs.org/`
+
+3.使用镜像
+
+`npm config set registry https://registry.npmmirror.com/`
+
+
+
+3.npm publish 出错
+
+> 1.[网络原因](https://www.cnblogs.com/yalong/p/11495661.html)
+
+> npm ERR! code ERR_STRING_TOO_LONG
+> npm ERR! Cannot create a string longer than 0x1fffffe8 characters
+>
+> npm ERR! A complete log of this run can be found in: D:\node_js\node_cache\_logs\2023-09-19T07_31_55_550Z-debug-0.log
+
+(未解决)
+
+
+
+[Web.lab crash course](https://weblab.mit.edu/schedule/)
+
+
+
+- vs安装插件Prettier Formatter for Visual Studio Code
+  - ~~快捷键Ctrl+s(美化格式)~~
+
+double dash : //
+
+
+
+##### -css flextbox
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+练习网站
+
+https://flexboxfroggy.com/
+
+http://www.flexboxdefense.com/
+
+> CSS Flexbox是一种用于创建灵活、响应式的布局的CSS模块。Flexbox提供了一套强大的布局工具，使开发者能够轻松地在容器内部对项目进行排序、对齐和分布，以及适应不同尺寸屏幕和设备。
+>
+> 以下是Flexbox的一些主要特点和概念：
+>
+> 1. 弹性容器（Flex containers）：使用Flexbox布局的元素称为弹性容器。通过将元素的父级容器设置为`display: flex`，就可以将其转换为弹性容器。
+>
+> 2. 弹性项目（Flex items）：弹性容器内的每个元素称为弹性项目。弹性项目根据弹性容器的布局规则定位和排列。
+>
+> 3. 主轴（Main axis）和交叉轴（Cross axis）：弹性容器具有一个主轴和一个交叉轴。默认情况下，主轴是水平轴，交叉轴是垂直轴。弹性项目可以在主轴上排列，也可以在交叉轴上对齐。
+>
+> 4. 弹性布局属性：通过使用一些简单的CSS属性，开发者可以控制弹性容器和弹性项目的布局样式。这些属性包括`flex-direction`、`justify-content`、`align-items`等，它们控制项目的排序、对齐和分布方式。
+>
+> 5. 响应式设计：Flexbox能够根据屏幕尺寸和设备特性自动调整布局。它可以很容易地实现响应式设计，并适应各种屏幕大小和设备类型。
+>
+> Flexbox是一种强大而直观的布局工具，使得构建复杂的网页布局变得更加简单和灵活。它适用于各种场景，包括导航菜单、图片库、网格布局、响应式布局等。学习和掌握Flexbox将使开发人员能够更高效地编写具有吸引力的页面布局。
+
+##### js-function
+
+两种写法
+
+```js
+//1.
+function sayHello2(name) {
+    console.log("Hello " + name);
+}
+sayHello2("Cecilia");
+
+//2. Syntax: (parameters) => { body };
+const celsiusToFahrenheit = (tempC) => { //celcius to fahrenheit
+    const tempF = tempC * 1.8 + 32;
+    return tempF;
+};
+console.log(celsiusToFahrenheit(10));   //50
+```
+
+-**Callback functions**
+
+```js
+const adTwo = x => {
+    return x + 2;
+};
+const modifyArray = (array, callback) => {
+    for (let i = 0; i < array.length; i++){
+        array[i] = callback(array[i]);
+    }
+};
+let myArray = [5,10,15,20];
+modifyArray(myArray, addTwo);	//[7,12,17,22]
+```
+
+**Anonymous functions**
+
+Syntax: (parameters) => output;
+
+```js
+const modifyArray = (array, callback) => {
+    for (let i = 0; i < array.length; i++){
+        array[i] = callback(array[i]);
+    }
+};
+
+let myArray = [5, 10, 15, 20];
+modifyArray(myArray, x => {
+    return x+2;
+});
+```
+
+##### - map
 

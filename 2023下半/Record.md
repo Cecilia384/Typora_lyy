@@ -578,8 +578,7 @@ http上传超时了，改为ssh重新推送
 ```assembly
 git remote rm origin
 git remote add origin git@github.com:xxx/yyy.git
-git push origin master
-
+git push origin main
 ```
 
 (坑)
@@ -593,7 +592,7 @@ git push origin master
 > 进入git bash界面然后：
 > 第1步，git config --global --list 验证邮箱与GitHub注册时输入的是否一致
 >
->  可以通过git config --global user.name “yourname”，git config --global user.email “email@email.com ”（这里得名字和邮箱都是注册github时用的）设置全局用户名和邮箱。
+> 可以通过git config --global user.name “yourname”，git config --global user.email “email@email.com ”（这里得名字和邮箱都是注册github时用的）设置全局用户名和邮箱。
 >
 > 第2步，ssh-keygen -t rsa -C “这里换上你的邮箱”，一路回车(注意：不需要输入其他内容），直到生成密钥。
 >
@@ -604,6 +603,10 @@ git push origin master
 > 右上角--> settings --> SSH and GPG keys ....
 >
 > **第4步**，ssh -T git@github.com 测试一下通不通，通了显示如下
+
+
+
+[生成ssh](https://blog.csdn.net/YuDBL/article/details/107160225?ops_request_misc=&request_id=&biz_id=102&spm=1018.2226.3001.4187)
 
 
 
@@ -675,9 +678,27 @@ daily
 >
 > `git config --global core.autocrlf input`
 >
+> `git config core.autocrlf input`
+>
 > 这个命令将全局配置的 core.autocrlf 属性设置为 input，这意味着在提交文件时，Git 会将 CRLF 转换为 LF。 这也是一种推荐的方式，因为 LF 是 Unix 风格的换行符，而大多数版本控制系统（包括 Git）都更喜欢使用 LF。
 >
 > 注意，这个命令会影响所有的 Git 仓库。如果你只想对当前仓库生效，可以将 --global 参数去掉。
 >
 > 修改完配置后，可以尝试再次提交文件，看是否还会出现警告信息。
->  
+
+
+
+提交三步骤
+
+```git
+git add.
+git commit -m"test(注释)"
+git push -u origin main
+```
+
+
+
+(坑)git 界面退出（返回上一级）
+
+> Esc+shift+z+z
+
