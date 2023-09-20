@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "83558b1d0f3ab3df",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e1fe472d7012191",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14cc2674fe3a9250",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023下半/Record.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "41e434185f40ec9e",
+    "type": "split",
+    "children": [
+      {
+        "id": "66aec1098951d889",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e69bc682fef1bb6e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d11c8cbd2c3d89ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9c77cef8e6ab3af9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "7f1eb056c90d4d1e",
+    "type": "split",
+    "children": [
+      {
+        "id": "058d87f892145b50",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7623300199851fc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2023下半/Record.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "beaa23ac65a81583",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2023下半/Record.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "87123bd38053cc96",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "efa5613fd26f4e34",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2023下半/Record.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "14cc2674fe3a9250",
+  "lastOpenFiles": [
+    "0_Xiaoli/0_daily2023.md",
+    "2023下半/Go.md",
+    "0_Xiaoli/a_daily2022.md",
+    "0_Xiaoli/pity.md",
+    "2023下半/Record.md"
+  ]
+}

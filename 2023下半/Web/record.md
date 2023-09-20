@@ -240,8 +240,6 @@ document.getElementById("mybutton").onclick = function() {
 }
 //2.
 let username1=window.prompt("what's your name?"); console.log(username1);
-How to accept user input in JavaScript
- 
 
 ````
 
@@ -668,3 +666,32 @@ const readlineSync = require('readline-sync');
 
  
 
+#### -Font Awesome
+
+Font Awesome 是一个流行的矢量图标库，它包含一系列用于网页、应用程序和其他设计项目的图标。你可以使用这些图标来增加用户界面的可视吸引力，并向用户传达信息。 
+
+> Font Awesome 是一套绝佳的图标字体库和CSS框架。
+>
+> Font Awesome 字体为您提供可缩放矢量图标,它可以被定制大小、颜色、阴影以及任何可以用CSS的样式。
+>
+> 要使用Font Awesome图标，请在HTML页面的  部分中添加以下行：
+>
+> 1、国内推荐 CDN：
+>
+> ```js
+> <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+> ```
+>
+> 2、海外推荐 CDN
+>
+> ```js
+> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+> ```
+>
+> 3、直接下载到本地
+>
+> https://static.runoob.com/download/font-awesome-4.7.0.zip
+
+#### 教程网站
+
+https://nqdeng.github.io/7-days-nodejs/

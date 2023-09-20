@@ -616,7 +616,7 @@ git push origin main
 
 - [ ] Redies
 
-- [ ] maven
+- [x] maven
 
 - [ ] Gradle
 
@@ -691,7 +691,7 @@ daily
 提交三步骤
 
 ```git
-git config core.autocrlf input //markdowng
+git config core.autocrlf input //markdown
 git add.
 git commit -m"test(注释)"
 git push -u origin main
@@ -702,4 +702,24 @@ git push -u origin main
 (坑)git 界面退出（返回上一级）
 
 > Esc+shift+z+z
+
+------------(obsidian)
+
+
+
+git回退历史版本
+
+1.reset
+
+`git reset --hard df83a0e75b6aee7946e9f566cfa532ce9c751928`(历史版本号)
+
+`git push -f -u origin develop`
+
+2.revert(great)
+
+`git revert -n 版本号`
+
+`git commit -m "xxx" `
+
+`git push -u origin main`
 
