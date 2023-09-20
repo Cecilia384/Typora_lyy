@@ -423,7 +423,7 @@ http://www.flexboxdefense.com/
 >
 > Flexbox是一种强大而直观的布局工具，使得构建复杂的网页布局变得更加简单和灵活。它适用于各种场景，包括导航菜单、图片库、网格布局、响应式布局等。学习和掌握Flexbox将使开发人员能够更高效地编写具有吸引力的页面布局。
 
-##### js-function
+#### js-function
 
 两种写法
 
@@ -475,4 +475,196 @@ modifyArray(myArray, x => {
 ```
 
 ##### - map
+
+```js
+let myArray = [1,2,3,4,5];
+let modifiedArray = myArray.map(x => x*3);
+// modifiedArray == [3,6,9,12,15]
+
+let celciusArray = [0,10,20,30,40];
+let fahrenheitArray = celciusArray.map(celsiusToFahrenheit);
+// fahrenheitArray == [32,50,68,86,104]
+```
+
+##### - fliter
+
+```js
+//--fliter--
+let values = [1,2,3,4,5,6,7,8,9,10];
+let evenValues = values.filter(x => x%2 == 0);
+// evenValues == [2,4,6,8,10]
+let values2 = [3,-6,8,-2,9,-4,0];
+let positiveValues = values2.filter(x => x >= 0);
+// positiveValues == [3,8,9,0]
+const staffNames = ["John", "Jane", "", "Jackie"];
+const shortNames = staffNames.filter(name => name != "" && name.length <= 4);
+// shortNames = ["John", "Jane"]
+```
+
+//One way to copy arrays and objects is to use the spread operator (...) like so:
+
+````js
+let myArra1 = [1,2,3,4,5];
+let myArray2 = [...myArray1];
+
+let obj = {name :"Bill Gates"};
+let copyObj = {...obj};
+````
+
+
+
+### 9.20
+
+- [ ] 配置vscode，目前无法调试nodejs文件
+- [ ] 找出vscode无法在输出框接受键盘输入的原因
+
+React
+
+> React是一个**用于构建用户界面的JavaScript库**。它由Facebook开发和维护，并且应用广泛。React使用组件化的方式来构建用户界面，通过将界面拆分为独立且可重用的组件，使开发人员能够以模块化的方式构建复杂的UI结构。
+>
+> React使用一种叫做**JSX的语法**，它允许在JavaScript代码中嵌入类似HTML的标记。这使得开发者能够以声明性的方式编写组件，并将其渲染为DOM元素。React使用虚拟DOM（Virtual DOM）技术来管理和更新界面，以高效地处理UI更新和重新渲染的过程。
+>
+> React还引入了一种称为"状态"（state）的概念，用于在组件中存储和管理数据。当状态发生变化时，React会自动更新组件的界面，以反映这些变化。这种响应式的更新机制使开发人员能够轻松地管理和同步UI与应用程序数据之间的关系。
+>
+> React具有较高的可组合性和可重用性，因此它在大型应用程序的开发中非常受欢迎。它还有一个活跃的社区，提供了大量的扩展库和工具，用于增强React的功能和便利开发。
+>
+> 简而言之，React是一个用于构建用户界面的JavaScript库，它以组件化、声明性的方式来构建UI，并使用虚拟DOM和状态管理来实现高效、高响应的界面更新。它在现代Web开发和移动应用开发中被广泛应用和推崇。
+
+React Native
+
+> React Native是一种可以用来开发手机应用的工具，它使用JavaScript语言和React的方式来创建应用程序。使用React Native，开发者可以只写一次代码，即可同时在iOS和Android等多个平台上运行应用程序。它使得开发速度更快，应用程序的性能和外观也与原生应用程序相当。无需重新编译，开发人员可以实时在开发过程中查看界面的变化，可以更快地进行开发和测试。React Native还有一个大型社区和生态系统，开发人员可以使用现成的组件和工具来构建功能丰富的应用程序。
+
+**npm**
+
+Node Package Manager
+
+(坑)nodejs 里的erro
+
+1.使用require导入模块时报错
+
+> - chalk最新版本不支持require导入--> 使用import语法导入
+>
+> - [参考](https://blog.csdn.net/bhegi_seg/article/details/123351538)
+>
+> - node.js报错 ReferenceError: require is not defined 解决方案分享
+>
+> - - 今天在应用 node.js 的时候突然报错了，之前一直是好的呢，费了九牛二虎之力终于搞明白了。
+>      原来是node在升级之后，对 require 的使用方法发生了改变。**从node.js 14版及以上版本中，require作为COMMONJS的一个命令已不再直接支持使用，所以我们需要导入createRequire命令才可以。**
+>      所以在使用 require 的时候只需要加入以下代码就可以了：
+>
+>     ```javascript
+>     import { createRequire } from 'module';
+>     const require = createRequire(import.meta.url);
+>     ```
+>
+>     参考2：
+>
+>   - https://www.cnblogs.com/Megasu/p/16635566.html
+
+2.SyntaxError: Cannot use import statement outside a module
+
+> - 没有配置pakage.json--> [csdn](https://blog.csdn.net/weixin_44505553/article/details/108830616)
+
+
+
+
+
+#### require和import
+
+回顾文章：https://newsn.net/say/node-run-es6.html
+
+- 通常来说使用`node xxx.js`来执行的代码，就是`commonjs`标准的。使用`require("xxx")`来导入第三方模块。
+
+- 而使用`node xxx.mjs`来执行的代码，或者`package.json`里面定义了`type:module`，或者各种编译类型（例如`webpack`）的，就都是属于`es module`类型（或者称之为`es`模块）。使用`import("xxx")`来导入第三方模块。
+
+- > 
+  >
+  > ##### 解决方案一：`await`【推荐】
+  >
+  > 普通的`commonjs`环境下，对比如下：
+  >
+  > ```js
+  > const { nanoid } = require('nanoid')
+  > ```
+  >
+  > vs
+  >
+  > ```js
+  > const { nanoid } = await import('nanoid');
+  > ```
+  >
+  > 也就是`require('xxx')`字样变成了`await import('xxx')`字样。但是，由于使用了`await`，大多数情况下，还需要一个`async`包裹一下对应的语句。
+  >
+  > ```js
+  > (async ()=>{
+  >     const { nanoid } = await import('nanoid');
+  >     console.log(nanoid(5));//调用的部分
+  > })();
+  > ```
+
+
+
+修改示例
+
+`var readlineSync = require('readline-sync');`
+
+```js
+import {createRequire} from 'module';//
+const require = createRequire(import.meta.url);//
+const readlineSync = require('readline-sync');
+```
+
+
+
+
+
+#### -inquirers.js
+
+> Inquirer.js确实更加强大，直接将多个问题以对象数组的形式组织到一起，并且针对密码类型的输入也做了隐藏处理。
+>
+> Inquirer.js官网对使用方式说明得十分详细，我做一下简单概括，questions是一个对象数组，你可以把它当成一个表单，每个对象代表一个问题的所有相关内容。
+>
+> 其中，**type**、name、**message**是最常用的属性。
+>
+> **type**表示回答问题的方式，包括input（输入框）, number（数字）, confirm（确认框）, list（列表）, rawlist（原始列表）, expand（展开列表）, checkbox（多选框）, password（密码）, editor（编辑器）9种。name表示存储在答案中的字段名称，message表示提问的问题。
+>
+> 除了以上三个属性，还有11个不是常用的属性，分别是：
+> **default：**答案默认值。
+> **choice：**列表的选项，对象数组。其中list、rawlist、checkbox的选项对象都是value和name组合，类似：
+>
+> ````js
+> {
+>     value: 'tennis',
+>     name: 'tennis'
+> }
+> ````
+>
+> 
+>
+> **expand**比较特殊，使用key和value的组合，类似：
+>
+> ```js
+> {
+>     key: 'R',
+>     value: 'red'
+> }
+> ```
+>
+> **validate**：用于校验输入内容，是一个函数，只有返回ture时，回车才会生效。
+> filter：用于将答案进行二次处理，是一个函数，返回值是答案的最终值。
+> **transformer**：在输入的信息后添加的提示信息，可以把它当成input的placeholder，对最终答案没有影响，是一个函数。
+> when：是一个函数，参数是answer，当返回值是true时，该问题才会生效并且进行提问。
+> **pageSize：**分页器，给list、rawList,、expand、checkbox列表使用，输入数字（代表每页多少个选项），当数字小于列表总选项时，会进行分页。
+> **prefix**：问题前缀。
+> suffix：问题后缀。
+> **askAnswered**：Boolean值，默认情况下为false，同样的答案字段如果已经存在则不会发起提问，但是如果为true，则会强制提问，并且新的答案会覆盖之前的。
+> **loop**：Boolean值，默认值为true。通常和pageSize使用，为true时，列表到最后一页继续前进的话会返回第一页。为false时，则不会。
+>
+> 参考
+>
+> > D:\nodejs_project\learn_nodejs\inquirerEg.js
+>
+> 
+
+ 
 

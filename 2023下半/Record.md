@@ -691,6 +691,7 @@ daily
 提交三步骤
 
 ```git
+git config core.autocrlf input //markdowng
 git add.
 git commit -m"test(注释)"
 git push -u origin main
