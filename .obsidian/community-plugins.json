@@ -3,8 +3,15 @@
   "obsidian-wakatime",
   "calendar",
   "zoottelkeeper-obsidian-plugin",
-  "buttons",
   "obsidian-outliner",
   "recent-files-obsidian",
-  "obsidian-day-planner"
+  "obsidian-day-planner",
+  "dataview",
+  "table-editor-obsidian",
+  "obsidian-kanban",
+  "obsidian-checklist-plugin",
+  "obsidian-hover-editor",
+  "various-complements",
+  "quick-latex",
+  "obsidian-admonition"
 ]

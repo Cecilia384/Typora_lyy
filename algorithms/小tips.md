@@ -491,11 +491,11 @@ for(int i=2;i<=n;i++)
 >- assert的作用是现计算表达式 expression ，如果其值为假（即为0），那么它先向stderr打印一条出错信息，然后通过调用 abort 来终止程序运行
 >  ————————————————
 >
->- 使用assert()的缺点是，频繁的调用会极大的影响程序的性能，增加额外的开销。在调试结束后，可以通过在包含#include <assert.h>的语句之前插入 #define NDEBUG 来禁用assert调用，示例代码如下：
+>- 使用assert()的缺点是，频繁的调用会极大的影响程序的性能，增加额外的开销。在调试结束后，可以通过在包含#include <assert.h>的语句之前插入 # eedefine NDEBUG 来禁用assert调用，示例代码如下：
 >
->#include <stdio.h>
->#define NDEBUG
->#include <assert.h>
+># include <stdio.h>
+># define NDEBUG
+># include <assert.h>
 >————————————————
 
 ### 12.4

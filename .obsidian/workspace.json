@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1e1fe472d7012191",
+        "id": "0946ecf4a4449644",
         "type": "tabs",
         "children": [
           {
-            "id": "14cc2674fe3a9250",
+            "id": "7494406b3b1145a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023下半/Record.md",
-                "mode": "preview",
+                "file": "README.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -39,23 +39,16 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
           {
-            "id": "d11c8cbd2c3d89ed",
+            "id": "aad2f82dc5bbdc9b",
             "type": "leaf",
             "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
+              "type": "todo",
+              "state": {}
             }
           },
           {
@@ -65,12 +58,35 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "201f16a4ad5c9c81",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "d11c8cbd2c3d89ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#todo",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 265.5
   },
   "right": {
     "id": "7f1eb056c90d4d1e",
@@ -81,12 +97,22 @@
         "type": "tabs",
         "children": [
           {
+            "id": "efa5613fd26f4e34",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          },
+          {
             "id": "e7623300199851fc",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023下半/Record.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023下半/Record.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,39 +147,71 @@
             }
           },
           {
-            "id": "efa5613fd26f4e34",
+            "id": "9f83dffa55fb7c09",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "2023下半/Record.md"
-              }
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "d5443f524b26c3f3",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "switcher:打开快速切换": false,
+      "obsidian-day-planner:Week plan": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "switcher:打开快速切换": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "14cc2674fe3a9250",
+  "active": "7494406b3b1145a3",
   "lastOpenFiles": [
-    "0_Xiaoli/0_daily2023.md",
-    "2023下半/Go.md",
-    "0_Xiaoli/a_daily2022.md",
-    "0_Xiaoli/pity.md",
-    "2023下半/Record.md"
+    "未命名.canvas",
+    "2023-09-22.md",
+    "2023-09-23.md",
+    "2023-09-30.md",
+    "notebook/Django.md",
+    "Daily/移动应用开发/Android_note.md",
+    "Daily/2023日记.md",
+    "notebook/java相关/java.md",
+    "游戏背景资料/素材绘制.md",
+    "游戏背景资料/项目计划.md",
+    "algorithms/小tips.md",
+    "Daily/WEB_daily.md",
+    "游戏背景资料/_Index_of_游戏背景资料.md",
+    "Daily/2023下半年.md",
+    "Daily/数据库_daily.md",
+    "Daily/GO_学习.md",
+    "2023下半/Web/record.md",
+    "2023下半/Record.md",
+    "2023-09-21.md",
+    "Daily/_Index_of_Daily.md",
+    "_Index_of_Typora_my.md",
+    "100.md",
+    "Daily/移动应用开发/_Index_of_移动应用开发.md",
+    "0重要!待完成/_Index_of_0重要!待完成.md",
+    "picture/Pasted image 20230921142950.png",
+    "picture/Pasted image 20230921142726.png",
+    "2023下半/数据库/daily.md",
+    "2023下半/_Index_of_2023下半.md",
+    "p1018.pdf",
+    "notebook/os习题.pdf"
   ]
 }

@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"6ca7f7113d02edbd","type":"text","text":"","x":240,"y":-212,"width":250,"height":89,"color":"2"},
+		{"id":"8b7c19749e277da6","x":-100,"y":59,"width":250,"height":60,"type":"text","text":""},
+		{"id":"785cd03e66833cf8","type":"file","file":"Daily/_Index_of_Daily.md","x":290,"y":119,"width":400,"height":400},
+		{"id":"bbe0766839794442","type":"text","text":"","x":-10,"y":-360,"width":250,"height":50}
+	],
+	"edges":[
+		{"id":"056b32507f89701e","fromNode":"6ca7f7113d02edbd","fromSide":"top","toNode":"bbe0766839794442","toSide":"top"},
+		{"id":"20f88cffa419ef07","fromNode":"8b7c19749e277da6","fromSide":"top","toNode":"6ca7f7113d02edbd","toSide":"bottom"},
+		{"id":"2e337cc8e3db6271","fromNode":"6ca7f7113d02edbd","fromSide":"bottom","toNode":"785cd03e66833cf8","toSide":"top"}
+	]
+}

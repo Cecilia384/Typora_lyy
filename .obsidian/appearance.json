@@ -1,7 +1,9 @@
 {
-  "accentColor": "",
+  "accentColor": "#edb6b6",
   "theme": "moonstone",
-  "cssTheme": "Minimal",
+  "cssTheme": "Blue Topaz",
   "textFontFamily": "华文楷体",
-  "monospaceFontFamily": "Consolas"
+  "monospaceFontFamily": "Consolas",
+  "translucency": true,
+  "baseFontSize": 17
 }

@@ -32,7 +32,7 @@ c++/c ，visual studio开发
 
 #### 7.2
 
-[（坑）vscode：四个乱码问题及解决方法](https://blog.csdn.net/weixin_50697073/article/details/122789632?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-122789632-blog-104277310.235^v38^pc_relevant_sort_base2&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
+[#坑 vscode：四个乱码问题及解决方法](https://blog.csdn.net/weixin_50697073/article/details/122789632?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-122789632-blog-104277310.235^v38^pc_relevant_sort_base2&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 
 
 
@@ -54,11 +54,11 @@ c++/c ，visual studio开发
 >
 >所有的预处理器指令都是以井号（#）开头，只有空格字符可以出现在预处理指令之前。预处理指令不是 C++ 语句，所以它们不会以分号（;）结尾。
 >
->我们已经看到，之前所有的实例中都有 **#include** 指令。这个宏用于把头文件包含到源文件中。
+>我们已经看到，之前所有的实例中都有` #include` 指令。这个宏用于把头文件包含到源文件中。
 >
->C++ 还支持很多预处理指令，比如 #include、#define、#if、#else、#line 等，让我们一起看看这些重要指令。
+>C++ 还支持很多预处理指令，比如 ·#include、#define、#if、#else、#line 等，让我们一起看看这些重要指令。
 >
->## #define 预处理
+>## ·#define 预处理
 >
 >\#define 预处理指令用于创建符号常量。该符号常量通常称为**宏**，指令的一般形式是：
 >
@@ -82,7 +82,7 @@ c++/c ，visual studio开发
 >
 >##  参数宏
 >
->您可以使用 #define 来定义一个带有参数的宏，如下所示：
+>您可以使用 `#define `来定义一个带有参数的宏，如下所示：
 >
 >```cpp
 >#include <iostream>
@@ -123,7 +123,7 @@ c++/c ，visual studio开发
 >#endif
 >```
 >
->如果在指令 #ifdef DEBUG 之前已经定义了符号常量 DEBUG，则会对程序中的 **cerr** 语句进行编译。您可以使用 `#if 0 `语句**注释掉**程序的一部分，如下所示：
+>如果在指令 `#ifdef` DEBUG 之前已经定义了符号常量 DEBUG，则会对程序中的 **cerr** 语句进行编译。您可以使用 `#if 0 `语句**注释掉**程序的一部分，如下所示：
 >
 >```cpp
 >#if 0
@@ -135,7 +135,7 @@ c++/c ，visual studio开发
 
 
 
-##### # 和 ## 运算符
+##### ``# 和 ## `运算符
 
 
 
@@ -701,7 +701,7 @@ git push -u origin main
 
 (坑)git 界面退出（返回上一级）
 
-> Esc+shift+z+z
+> Esc+shift+z+zgit
 
 ------------(obsidian)
 
@@ -723,3 +723,4 @@ git回退历史版本
 
 `git push -u origin main`
 
+- [ ] 
