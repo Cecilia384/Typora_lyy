@@ -10,6 +10,11 @@
   "sortDirectionSubGroups": "new->old",
   "includeFiles": "",
   "lookAndFeel": "classic",
-  "_collapsedSections": [],
+  "_collapsedSections": [
+    "Daily/WEB_daily.md",
+    "Daily/移动应用开发/Android_note.md",
+    "notebook/Django.md",
+    "Daily/2023下半年.md"
+  ],
   "_hiddenTags": []
 }

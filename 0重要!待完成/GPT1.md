@@ -1,3 +1,57 @@
+2023.10.15
+
+> 要使用 Python 爬取豆瓣电影中正在热映的电影详情并将其存储到 CSV 文件中，您可以按照以下步骤进行操作：
+>
+> 1. 导入所需的库：
+> ```python
+> import csv
+> import requests
+> from bs4 import BeautifulSoup
+> ```
+>
+> 2. 发送请求并解析页面内容：
+> ```python
+> url = "https://movie.douban.com/cinema/nowplaying"  # 豆瓣正在热映电影页面的URL
+> 
+> response = requests.get(url)
+> soup = BeautifulSoup(response.text, "html.parser")
+> ```
+>
+> 3. 定位到电影的父级元素，遍历获取每部电影的相关信息：
+> ```python
+> movies = soup.find_all("div", class_="nowplaying__film")  # 定位到电影的父级元素
+> 
+> data = []
+> 
+> for movie in movies:
+>     title = movie["data-title"]  # 电影标题
+>     director = movie["data-director"]  # 导演
+>     writer = movie["data-scriptwriter"]  # 编剧
+>     actors = movie["data-actors"]  # 主演
+>     genres = movie["data-genre"]  # 类型
+>     score = movie["data-score"]  # 豆瓣评分
+>     vote_count = movie["data-votecount"]  # 评价人数
+> 
+>     detail = [director, writer, actors, genres, score, vote_count]
+>     data.append(detail)
+> ```
+>
+> 4. 将数据写入 CSV 文件：
+> ```python
+> filename = "hot_movies.csv"
+> 
+> with open(filename, "w", newline='', encoding='utf-8') as file:
+>     writer = csv.writer(file)
+>     writer.writerow(["导演", "编剧", "主演", "类型", "豆瓣评分", "评价人数"])
+> 
+>     for row in data:
+>         writer.writerow(row)
+> 
+> print("数据已成功写入到 %s 文件中" % filename)
+> ```
+>
+> 请确保您已经安装了所需的库（使用 `pip install 模块名` 进行安装），同时使用合适的 CSS 选择器和标签属性来定位正确的元素。以上步骤为您实现将正在热映的电影详情爬取并存储到 CSV 文件中提供了一个基本框架。您可以根据需要进行修改和扩展。
+
 
 
 24 88 21 48 15 27 69 35 20

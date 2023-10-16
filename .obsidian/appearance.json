@@ -1,9 +1,9 @@
 {
   "accentColor": "#edb6b6",
-  "theme": "moonstone",
-  "cssTheme": "Blue Topaz",
+  "theme": "obsidian",
+  "cssTheme": "Red Graphite",
   "textFontFamily": "华文楷体",
   "monospaceFontFamily": "Consolas",
   "translucency": true,
-  "baseFontSize": 17
+  "baseFontSize": 18
 }

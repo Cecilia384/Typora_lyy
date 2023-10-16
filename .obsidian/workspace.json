@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0946ecf4a4449644",
+        "id": "5967f06e1f2dcef6",
         "type": "tabs",
         "children": [
           {
-            "id": "7494406b3b1145a3",
+            "id": "61fca16017092b3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "2023下半/c++游戏ll项目/c++基础.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#todo",
+                "query": "tag:#碎碎念",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 200
   },
   "right": {
     "id": "7f1eb056c90d4d1e",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "2023下半/c++游戏ll项目/c++基础.md"
               }
             }
           },
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "2023下半/c++游戏ll项目/c++基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "2023下半/c++游戏ll项目/c++基础.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,36 +181,37 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "7494406b3b1145a3",
+  "active": "61fca16017092b3a",
   "lastOpenFiles": [
-    "未命名.canvas",
-    "2023-09-22.md",
-    "2023-09-23.md",
-    "2023-09-30.md",
+    "2023下半/数据库/daily.md",
     "notebook/Django.md",
-    "Daily/移动应用开发/Android_note.md",
     "Daily/2023日记.md",
+    "Daily/WEB_daily.md",
+    "Daily/2023下半年.md",
+    "Daily/移动应用开发/Android_note.md",
+    "0重要!待完成/tool网站.md",
+    "Daily/GO_学习.md",
+    "Daily/数据库_daily.md",
+    "100.md",
+    "2023-09-23.md",
+    "未命名.canvas",
+    "README.md",
+    "2023-09-22.md",
+    "2023-09-30.md",
     "notebook/java相关/java.md",
     "游戏背景资料/素材绘制.md",
     "游戏背景资料/项目计划.md",
     "algorithms/小tips.md",
-    "Daily/WEB_daily.md",
     "游戏背景资料/_Index_of_游戏背景资料.md",
-    "Daily/2023下半年.md",
-    "Daily/数据库_daily.md",
-    "Daily/GO_学习.md",
     "2023下半/Web/record.md",
     "2023下半/Record.md",
     "2023-09-21.md",
     "Daily/_Index_of_Daily.md",
     "_Index_of_Typora_my.md",
-    "100.md",
     "Daily/移动应用开发/_Index_of_移动应用开发.md",
     "0重要!待完成/_Index_of_0重要!待完成.md",
     "picture/Pasted image 20230921142950.png",
     "picture/Pasted image 20230921142726.png",
-    "2023下半/数据库/daily.md",
-    "2023下半/_Index_of_2023下半.md",
     "p1018.pdf",
     "notebook/os习题.pdf"
   ]

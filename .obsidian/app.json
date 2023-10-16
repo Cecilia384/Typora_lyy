@@ -1,5 +1,6 @@
 {
   "readableLineLength": false,
   "promptDelete": false,
-  "focusNewTab": true
+  "focusNewTab": true,
+  "alwaysUpdateLinks": true
 }

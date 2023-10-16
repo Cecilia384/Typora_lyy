@@ -741,7 +741,7 @@ a:active {color:#0000FF;} /* 已选中的链接 */
 >
 > - 伪类的名称不区分大小写。
 
-- [ ] #todo CSS导航栏
+- [x] #todo CSS导航栏
 - [ ] #todo CSS伪元素
 
 
@@ -782,3 +782,269 @@ Q:tomcat应用在idea中和VScode直接live sever显示html，css，js效果有�
 > JDK 中的 bin 目录包含了用来开发和构建 Java 应用程序的工具和程序，lib 目录包含了用于支持编译和运行 Java 应用程序的库文件，而 JRE 目录中的文件已经被 JDK 整合进了相应的子目录。
 
 - [x] 配置tomcat
+
+### 10.1
+- 尝试做SJTU 的webapp开发项目，先跟着学习！ 
+	github:https://github.com/Musicminion/SJTU-SE2321-Web-Application-Development-PPT
+- 关于自己想设计的网站，想增加支持openai的功能，所以后期也得学一下这方面的部署
+
+
+
+### 10.6
+
+#### **[reveal.js](https://github.com/hakimel/reveal.js)**         
+
+> reaveal.js 是一个基于 web 技术的开源演示文稿框架。它允许用户创建漂亮、交互式的幻灯片转换。reveal.js 通过 HTML、CSS 和 JavaScript 实现，能够生成具有动态过渡效果和多媒体支持的现代演示文稿。
+>
+> 使用 reveal.js，您可以创建具有各种自定义主题、布局和演出效果的演示文稿。它提供了许多现成的漂亮样式和配置选项，可以轻松地在幻灯片中添加图像、视频、音乐和其他媒体元素，并支持 Markdown、HTML 和 PDF 导出。
+>
+> reveal.js 具有许多强大功能，如：
+>
+> - 幻灯片布局：支持横向和纵向布局，以及分屏布局。
+> - 主题和样式：提供了多个主题和样式供选择，也可以自定义样式来符合您的设计需求。
+> - 转换效果：支持多种转场效果，如滑动、淡出、缩放等。
+> - 代码展示：内置了代码展示功能，支持多种编程语言的代码美化和高亮显示。
+> - 演讲者模式：可以实时预览幻灯片，并在另一个窗口中提供演讲者笔记等辅助功能。
+> - 键盘和鼠标导航：支持使用键盘和鼠标控制演示，在全屏模式下进行交互。
+>
+> reveal.js 还具有跨平台的特性，可以进行跨设备和浏览器的兼容性，包括桌面和移动设备。为了使用 reveal.js，您只需将相关的 HTML、CSS 和 JavaScript 文件添加到您的项目中，并按照框架的结构创建您的演示文稿内容即可。
+>
+> 总结来说，reveal.js 是一个强大而灵活的演示文稿框架，可以帮助您创建专业、互动和具有个性化风格的演示文稿。它秉承了 web 技术的优点，使得演示更加优雅和灵活。
+
+
+
+[支持 Markdown 的网页 slides 工具总结](https://blog.csdn.net/yeasy/article/details/41480435)
+
+
+
+(原本是想用网页做一个课程展示，感觉单纯html+css也能完成，reveal.js主要还是把markdown演示出来，实际上的效果和ppt也差不多，可能是我还不太会用吧)
+
+
+
+- 关于开发
+
+  （学了这么久HTML+css+js，还是不知道的在学什么，也在了解webpack，redis，ruby这些，感觉好乱啊，想做成一个项目，把这些知识都联系起来……但是还没有想到/找到合适的）
+
+
+
+- Vercel和GitHub Pages都是用于托管静态网站的流行平台
+
+- 问题还是出在不知道为“什么”而做，没有具体的需求感觉无法去构思一个有用的东西……不想照着网上的教程做一个电商网页（感觉很没用
+
+ 
+
+### *10.8*
+
+- #坑 创建maven管理的web项目出错：
+
+  “加载maven插件的时候出错
+
+  ->解决：clean之后重新install（感觉是网络问题）
+
+  [Could not transfer artifact xxxx依赖找不到](https://blog.csdn.net/newoneobjectddd/article/details/124706372)
+
+- #坑 取消/启用vscode自动换行：`Alt+z`
+
+  
+
+Lab作业：
+
+> - `getElementById("sendButton")` 表示通过元素的 ID 获取 HTML 元素的引用，这里是指发送按钮。
+> - `onclick` 是一个事件处理程序，当指定的元素被单击时，其内部的函数将被触发。
+> - `document.createElement("p")` 创建一个新的 HTML 元素，这里是一个段落 `<p>` 元素，用于包裹聊天消息。
+> - `getElementById("messageInput")` 获取输入框的引用，用于获取用户输入的信息。
+> - `textContent` 属性用于获取或设置元素的文本内容。
+> - `appendChild(messageElement)` 将子元素添加到父元素的末尾。这里是将新的聊天消息元素（`messageElement`）添加到聊天框（`chatBox`）中。
+> - `messageInput.value` 获取输入框中的值，即用户输入的聊天消息。
+> - `messageInput.value = ""` 将输入框的值设置为空，清空输入框中的内容。
+> - `chatBox.scrollTop` 获取或设置聊天框的滚动条的垂直位置。
+> - `chatBox.scrollHeight` 获取带有滚动条的聊天框的内容的总高度，包括可见部分和可滚动但不可见的部分。
+>
+> 以上都是通过标准的 JavaScript 函数来完成DOM操作。这些函数用于从 HTML 元素的内容提取和设置值，以及获取、创建和附加 HTML 元素到 DOM 结构。通过使用这些函数，我们可以根据用户的输入和交互来构建动态的聊天室界面。
+>
+>  
+
+### *10.9*
+
+#### css-渐变背景
+
+><gradient>
+>
+>**`<gradient>`** [CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) [数据类型](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Types) 是 [``](https://developer.mozilla.org/zh-CN/docs/Web/CSS/image) 的一种特殊类型，包含两种或多种颜色的过渡转变。
+>
+>CSS 渐变[没有内在尺寸](https://developer.mozilla.org/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
+>
+>[语法](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient#语法)
+>
+>`<gradient>` 数据类型是由下面列出的函数类型中的一个定义的。
+>
+>[线性渐变](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient#线性渐变)
+>
+>线性渐变会在一个假想的直线上过渡颜色。线性渐变是由 [`linear-gradient()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient) 函数产生的。
+>
+>[径向渐变](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient#径向渐变)
+>
+>径向渐变从一个中间点（原点）开始过渡颜色。径向渐变是由 [`radial-gradient()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/radial-gradient) 函数产生的。
+>
+>[重复渐变](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient#重复渐变)
+>
+>重复渐变可根据需要复制渐变，以填充指定区域。重复渐变是使用 [`repeating-linear-gradient()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/repeating-radial-gradient) 函数生成的。
+>
+>[锥形渐变](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient#锥形渐变)
+>
+>锥形渐变会沿着一个圆过渡颜色。锥形渐变是由 [`conic-gradient()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/conic-gradient) 函数产生的。
+
+
+
+
+
+- !在webstorm里面成功创建了vue项目！
+
+
+
+#### 图片资源网站
+
+> 以下是一些免费的高清图片资源网站：
+>
+> 1. [**Pixabay**：提供超过 4.2 百万张优质图片和视频素材，全部免费使用和下载](https://www.entrepreneur.com/growing-a-business/7-sources-of-free-high-quality-stock-images/248683)[1](https://www.entrepreneur.com/growing-a-business/7-sources-of-free-high-quality-stock-images/248683)[2](https://pixabay.com/)。
+> 2. [**Pexels**：提供高质量的免费图片和视频素材，无需注明归属](https://www.entrepreneur.com/growing-a-business/7-sources-of-free-high-quality-stock-images/248683)[2](https://pixabay.com/)[3](https://www.pexels.com/)。
+> 3. [**Unsplash**：提供免费的高质量图片和视频素材，无需注明归属](https://unsplash.com/)[4](https://unsplash.com/)。
+> 4. [**StockSnap**：提供免费的高清图片资源，每周更新](https://www.entrepreneur.com/growing-a-business/7-sources-of-free-high-quality-stock-images/248683)[5](https://zapier.com/blog/best-free-stock-photos/).
+> 5. [**Flickr**：提供超过 10 亿张免费的高清图片资源，可以根据不同的许可证进行筛选](https://zapier.com/blog/best-free-stock-photos/)[5](https://zapier.com/blog/best-free-stock-photos/).
+> 6. [**Burst**：提供免费的高清图片资源，适用于电子商务公司](https://www.entrepreneur.com/growing-a-business/7-sources-of-free-high-quality-stock-images/248683)[5](https://zapier.com/blog/best-free-stock-photos/).
+> 7. [**New Old Stock**：提供古老的历史照片，可以免费使用](https://www.entrepreneur.com/growing-a-business/7-sources-of-free-high-quality-stock-images/248683)[5](https://zapier.com/blog/best-free-stock-photos/).
+
+#### imgix.com
+
+https://imgix.com/
+
+一个综合性的视觉媒体解决方案，可以让您更好地控制您的网站或应用程序中的图像和视频。它有免费试用期，价格也很灵活。
+
+
+
+#### [滚动进度动画](https://developer.mozilla.org/en-US/blog/scroll-progress-animations-in-css/)
+
+
+
+
+#### Linear() 函数
+ [Linear() 函数在 CSS 动画中创建自定义缓动效果](https://developer.mozilla.org/en-US/blog/custom-easing-in-css-with-linear/)
+
+
+
+[分享](https://ruby-china.org/topics/node26) Web 中文字体应用指南
+
+
+
+#### div里面id和class的区别
+
+> 在 HTML 中，`class` 和 `id` 是用于为元素添加标识符的属性。它们之间的主要区别如下：
+>
+> 1. 唯一性限制：`id` 属性的值必须在整个 HTML 文档中具有唯一性，即每个元素只能有一个唯一的 id 值。而 `class` 属性的值可以在文档中多次使用，同一个值可以用于多个元素。
+>
+>    例如：
+>    ```html
+>    <div id="my-element"></div> <!-- 唯一的 id -->
+>    <div class="my-class"></div> <!-- 与其他元素共享相同的 class -->
+>    ```
+>
+> 2. 选择器引用：`id` 属性可以用作 CSS 或 JavaScript 的选择器，以唯一地标识一个特定的元素。可以使用 `#` 符号来引用 id，如 `#my-element`。而 `class` 属性可以作为 CSS 或 JavaScript 的选择器引用，以同时选择多个具有相同 class 的元素。选择器使用 `.` 符号来引用 class，如 `.my-class`。
+>
+> 3. 特定性：`id` 属性的特定性较高，这意味着与 `id` 相关的规则在样式和 JavaScript 中的优先级更高。而 `class` 属性的特定性较低，适合用于定义多个元素的共享样式。
+>
+>    例如，假设您同时定义以下两条规则：
+>    ```css
+>    #my-element {
+>        color: red;
+>    }
+>                
+>    .my-class {
+>        color: blue;
+>    }
+>    ```
+>    在这种情况下，`id` 规则的优先级更高，所以应用红色文本颜色的是具有 `id="my-element"` 的元素。
+>
+> 综上所述，`class` 属性和 `id` 属性在对元素进行标识和选择时有不同的用途和限制。`id` 用于唯一的标识和引用一个元素，而 `class` 用于在多个元素之间共享属性或样式。
+
+
+
+### 10.10
+
+- [ ] #todo 将整体的布局大小改为适应网页窗口大小
+- [ ] 写一个servelet提供更多课程的信息（先了解知识
+- [ ] （可选）优化hover效果，找一些图片看看能不能做成视差效果
+- [ ] 六点去做项目
+
+#### 异步JavaScript
+
+[简介](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
+
+> 异步vs同步
+>
+> 异步函数为我们提供：
+>
+> - 通过调用一个函数来启动一个长期运行的操作
+> - 让函数开始操作并立即返回，这样我们的程序就可以保持对其他事件做出反应的能力
+> - 当操作最终完成时，通知我们操作的结果。
+>
+> 
+
+#### 导入servlet
+
+错粗写法：
+
+```
+import javax.servlet.*
+```
+
+正确写法
+
+```
+import jakarta.servlet.*
+```
+
+
+
+#坑 Cannot resolve symbol 'JSONArray'
+
+[Intellij Ideal 解决“cannot resolve symbol 'json'”问题](https://blog.csdn.net/ly_solo/article/details/88975642)
+
+
+
+- [idea使用jsp页面实时更新，tomcat配置](https://blog.csdn.net/weixin_44245604/article/details/105220163?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-4-105220163-blog-74171050.235^v38^pc_relevant_sort_base3&spm=1001.2101.3001.4242.3&utm_relevant_index=7)
+  - [idea热部署没有Update classes and resources选项](https://blog.csdn.net/qq_36509946/article/details/99566654)
+
+
+
+"C:\Users\08042x'l\IdeaProjects\demo1\src\main\java\com\example\demo1\HelloServlet.java"
+
+
+
+
+
+### 10.11
+
+####  nodejs项目
+
+[awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs)
+
+
+
+### 10.13
+
+#### react
+
+> Ant Design of React
+> ●https://ant.design/docs/react/introduce-cn
+> React Router中文文档
+> ●http://react-guide.github.io/react-router-cn/index.html
+> React Router使用教程
+> https://www.jianshu.com/p/ 78d551b6d1ac
+> 在ReactRouter4中建立具有權限檢核的PrivateRoute組件
+> https://dotblogs.com.tw/wasichris/2018/01/22/002904
+> React- Router v4简单入门教程.
+> ●https:/ /www.jianshu.com/p/5e8297858ea8
+> React Router Tutorial
+> ●https://www.codingame.com/ playgrounds/6517/react-router-tutorial
+
+"D:\GameMaker.
