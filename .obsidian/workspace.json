@@ -11,16 +11,38 @@
             "id": "61fca16017092b3a",
             "type": "leaf",
             "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "a6a49af8a3e56975",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "2023下半/c++游戏ll项目/c++基础.md",
+                "file": "Daily/WEB_daily.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5f95e19c66299a8a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily/2023下半年.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023下半/c++游戏ll项目/c++基础.md"
+                "file": "Daily/WEB_daily.md"
               }
             }
           },
@@ -112,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023下半/c++游戏ll项目/c++基础.md",
+                "file": "Daily/WEB_daily.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023下半/c++游戏ll项目/c++基础.md",
+                "file": "Daily/WEB_daily.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,17 +203,23 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "61fca16017092b3a",
+  "active": "a6a49af8a3e56975",
   "lastOpenFiles": [
-    "2023下半/数据库/daily.md",
-    "notebook/Django.md",
+    "Daily/数据库_daily.md",
     "Daily/2023日记.md",
     "Daily/WEB_daily.md",
     "Daily/2023下半年.md",
+    "Daily/Android_note.md",
+    "Daily/_Index_of_Daily.md",
+    "0_Xiaoli/0_daily2023.md",
+    "0_Xiaoli/a_daily2022.md",
+    "0_Xiaoli/2022日记.md",
+    "2023下半/c++游戏ll项目/c++基础.md",
+    "2023下半/数据库/daily.md",
+    "notebook/Django.md",
     "Daily/移动应用开发/Android_note.md",
     "0重要!待完成/tool网站.md",
     "Daily/GO_学习.md",
-    "Daily/数据库_daily.md",
     "100.md",
     "2023-09-23.md",
     "未命名.canvas",
@@ -204,12 +232,6 @@
     "algorithms/小tips.md",
     "游戏背景资料/_Index_of_游戏背景资料.md",
     "2023下半/Web/record.md",
-    "2023下半/Record.md",
-    "2023-09-21.md",
-    "Daily/_Index_of_Daily.md",
-    "_Index_of_Typora_my.md",
-    "Daily/移动应用开发/_Index_of_移动应用开发.md",
-    "0重要!待完成/_Index_of_0重要!待完成.md",
     "picture/Pasted image 20230921142950.png",
     "picture/Pasted image 20230921142726.png",
     "p1018.pdf",

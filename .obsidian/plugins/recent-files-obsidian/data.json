@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "WEB_daily",
+      "path": "Daily/WEB_daily.md"
+    },
+    {
+      "basename": "数据库_daily",
+      "path": "Daily/数据库_daily.md"
+    },
+    {
+      "basename": "2023下半年",
+      "path": "Daily/2023下半年.md"
+    },
+    {
+      "basename": "2023日记",
+      "path": "Daily/2023日记.md"
+    },
+    {
+      "basename": "Android_note",
+      "path": "Daily/Android_note.md"
+    },
+    {
+      "basename": "_Index_of_Daily",
+      "path": "Daily/_Index_of_Daily.md"
+    },
+    {
+      "basename": "0_daily2023",
+      "path": "0_Xiaoli/0_daily2023.md"
+    },
+    {
+      "basename": "a_daily2022",
+      "path": "0_Xiaoli/a_daily2022.md"
+    },
+    {
+      "basename": "2022日记",
+      "path": "0_Xiaoli/2022日记.md"
+    },
+    {
       "basename": "c++基础",
       "path": "2023下半/c++游戏ll项目/c++基础.md"
     },
@@ -13,14 +49,6 @@
       "path": "notebook/Django.md"
     },
     {
-      "basename": "2023日记",
-      "path": "Daily/2023日记.md"
-    },
-    {
-      "basename": "2023下半年",
-      "path": "Daily/2023下半年.md"
-    },
-    {
       "basename": "Android_note",
       "path": "Daily/移动应用开发/Android_note.md"
     },
@@ -29,16 +57,8 @@
       "path": "0重要!待完成/tool网站.md"
     },
     {
-      "basename": "WEB_daily",
-      "path": "Daily/WEB_daily.md"
-    },
-    {
       "basename": "GO_学习",
       "path": "Daily/GO_学习.md"
-    },
-    {
-      "basename": "数据库_daily",
-      "path": "Daily/数据库_daily.md"
     },
     {
       "basename": "100",
@@ -83,10 +103,6 @@
     {
       "basename": "Record",
       "path": "2023下半/Record.md"
-    },
-    {
-      "basename": "_Index_of_Daily",
-      "path": "Daily/_Index_of_Daily.md"
     },
     {
       "basename": "os习题",

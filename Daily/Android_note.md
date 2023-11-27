@@ -336,7 +336,7 @@
 >           if (requestCode == 1 && resultCode == RESULT_OK) {
 >           if (data != null && data.hasExtra("selectedDate")) {
 >               String selectedDate = data.getStringExtra("selectedDate");
->          
+>                               
 >               // 更新UI以显示所选日期
 >               TextView textView = findViewById(R.id.textView);
 >               textView.setText("Selected Date: " + selectedDate);
@@ -451,4 +451,271 @@ gpt_eg1:
 
 > - KEY1：
 >   - ==**直接从设备上删除应用**==是删除数据库文件最便捷的方法。要在模拟器上删除应用，可以切换 到应用浏览器界面，向上拖动CriminalIntent应用的图标，直到屏幕顶部出现Uninstall字样
+
+
+
+### *10.17*
+
+#坑 处理重复布局的代码
+
+==KEY==:
+
+>   1.使用标签
+>   2.使用 RecyclerView
+
+- [ ] #todo 优化界面设计
+- [ ] #todo 输入限制（只能是数字）
+- [ ] #todo test 功能里面，提交之后，显示所有对错/答案
+- [x]  增加记录错题的功能
+  - [x] 修改添加错题逻辑（现在每次记录只有用户答案改变了）
+  - [x] 修改错题页面
+
+
+
+
+
+打包apk(阿西，打包之前应该跑一次的……忘记注释与test相关的代码了)
+
+密码都是153153
+
+
+
+10h（好难过啊，交作业忘记贴代码了）
+
+![image-20231024141114297](Android_note.assets/image-20231024141114297.png)
+
+### 10.24
+
+请自主DIY一款APP以实现或部分实现：
+
+1.调用照相机功能；；；
+
+2.将新拍摄照片保存至sqlLite数据库中，包含拍摄点的时间（精确到秒）及经度和纬度值；
+
+3.浏览数据库中图片（亦可约定显示近一天或一周来新入库图片）。
+
+
+
+ 
+
+> 要实现这个 DIY APP 的过程，你可以按照以下步骤进行操作：
+>
+> 1.调用照相机功能：
+>
+> - 在布局文件中创建一个按钮或图标用于触发拍照操作。例如，你可以使用一个 `ImageView` 图标作为拍照按钮。
+> - 在按钮的点击监听器中，使用系统的照相机应用来启动拍照功能，并捕获拍摄的图像。你可以使用 `Intent` 来启动拍照应用并指定图像的保存路径。
+> - 实现拍照完成后的处理逻辑，并显示或处理拍摄的图像。例如，你可以将图像显示在一个 `ImageView` 中。
+>
+> 2. 将新拍摄照片保存至 SQLite 数据库中，包含拍摄点的时间和位置信息：
+> - 首先，在你的应用中创建一个 `SQLiteOpenHelper` 类来管理数据库的创建和升级。
+> - 创建一个数据库表用于存储照片的信息，包括拍摄时间、经度和纬度值等字段。
+> - 在拍照完成后的处理逻辑中，获取到拍照时的时间和位置信息，并将图像的路径以及其他相关信息插入到数据库表中。
+> - 还可以使用相应的查询语句，通过时间和位置条件来从数据库中检索出所需的图片。
+>
+> 3. 浏览数据库中的图片（近一天或一周内入库的图片）：
+> - 在你的应用中创建一个用于显示图片的布局组件，例如一个 `RecyclerView`，用于在界面中以列表或网格的形式显示图片的缩略图。
+> - 从数据库中查询获取特定时间范围内（近一天或一周）入库的图片，可以使用相应的 SQL 查询语句筛选数据。
+> - 将查询到的图片数据适配到 `RecyclerView` 中的适配器中，并创建合适的布局来显示缩略图和其他相关信息。
+> - 可以通过点击缩略图来查看大图或执行其他操作，如删除图像等。
+>
+> 总的来说，要实现这个 DIY APP，你需要了解如何使用照相机 API 来捕获图像，如何使用 SQLite 数据库 API 进行图片信息的存储和检索，以及如何使用布局和适配器来显示图像列表。自定义这个 APP 可能涉及到更多细节和功能，但以上步骤是实现这个 APP 的基本思路。
+>
+> 
+
+````java
+以下是每个步骤的详细说明：
+
+**1. 调用照相机功能:**
+
+- 创建一个新的 Android 项目，可以使用 Android Studio 创建。
+- 在布局文件（XML）中添加一个按钮，如下所示：
+```xml
+<Button
+    android:id="@+id/btnCapturePhoto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="拍照" />
+```
+
+- 在活动类中，为按钮添加点击事件处理程序，并在其中使用 Intent 启动相机应用：
+```java
+Button captureButton = findViewById(R.id.btnCapturePhoto);
+captureButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+});
+```
+
+- 在 `onActivityResult` 方法中，处理拍照结果，包括获取拍摄的照片。
+
+**2. 将新拍摄照片保存至 SQLite 数据库中:**
+
+- 创建一个 SQLiteOpenHelper 子类，以创建和管理数据库。在其 `onCreate` 方法中创建一个表来存储照片信息，包括文件路径、拍摄时间和地理位置信息。
+
+```java
+public class DBHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = "PhotoApp.db";
+    private static final int DATABASE_VERSION = 1;
+
+    private static final String TABLE_PHOTOS = "photos";
+    private static final String COLUMN_ID = "_id";
+    private static final String COLUMN_PHOTO_PATH = "photo_path";
+    private static final String COLUMN_CAPTURE_TIME = "capture_time";
+    private static final String COLUMN_LATITUDE = "latitude";
+    private static final String COLUMN_LONGITUDE = "longitude";
+
+    private static final String DATABASE_CREATE = "create table "
+            + TABLE_PHOTOS + "(" + COLUMN_ID
+            + " integer primary key autoincrement, "
+            + COLUMN_PHOTO_PATH + " text not null, "
+            + COLUMN_CAPTURE_TIME + " integer, "
+            + COLUMN_LATITUDE + " real, "
+            + COLUMN_LONGITUDE + " real);";
+
+    public DBHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase database) {
+        database.execSQL(DATABASE_CREATE);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        Log.w(DBHelper.class.getName(),
+                "Upgrading database from version " + oldVersion + " to "
+                        + newVersion + ", which will destroy all old data");
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_PHOTOS);
+        onCreate(db);
+    }
+}
+```
+
+- 在活动中，实例化 `DBHelper` 类，并在拍摄照片后，将文件路径、拍摄时间和地理位置信息插入到数据库中。
+
+**3. 浏览数据库中图片:**
+
+- 创建一个新的界面用于显示数据库中的照片。
+- 查询数据库以获取近一天或一周内的照片数据，并将其显示在界面上。
+- 你可以使用 RecyclerView 或 ListView 来创建图片列表视图。
+- 另外，你可以添加筛选选项，允许用户选择显示的时间范围。
+
+这些步骤提供了一个概要，你需要详细查看 Android 开发文档和教程，以获取有关如何实现这些功能的更多信息。这个项目可能会涉及到很多代码和复杂性，因此建议学习 Android 开发的基础知识，如 Intent、SQLite 数据库和界面设计。
+````
+
+
+
+#### startActivityForResult被弃用
+
+[startActivityForResult被标记为弃用后，如何优雅的启动Activity?](https://blog.csdn.net/qq_27489007/article/details/130133091)
+
+
+
+####  FileProvider
+
+ndroidManifest.xml文件中没有正确配置FileProvider
+
+> \1. 您的AndroidManifest.xml文件中没有正确配置FileProvider。请确保在`<application>`标签内添加以下内容： ```xml <provider    android:name="androidx.core.content.FileProvider"    android:authorities="com.example.cameraapp.fileprovider"    android:exported="false"    android:grantUriPermissions="true">    <meta-data        android:name="android.support.FILE_PROVIDER_PATHS"        android:resource="@xml/file_paths" /> </provider> ``` 请确保`android:authorities`的值与代码中的`FileProvider.getUriForFile()`方法中的值相匹配。
+
+
+
+#### start.java
+
+```java
+public class Start extends AppCompatActivity {
+
+    private ImageView imageView;                                                // 从布局文件中获取用于显示照片的ImageView
+    private Uri photoUri;                                                       // 存储拍照后照片的路径的 URI
+    private ActivityResultLauncher<Intent> cameraLauncher;                      // ActivityResultLauncher 获取拍照结果的启动程序
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start);
+
+        imageView = findViewById(R.id.photoImageView);                          // 初始化 ImageView，并与布局文件中的对应视图关联
+        Button captureButton = findViewById(R.id.takePhotoBtn);                 // 初始化 Button，并与布局文件中的对应视图关联
+        captureButton.setOnClickListener(v -> {                                // 设置按钮的点击事件监听器
+            dispatchTakePictureIntent();                                        // 调用拍照的方法
+        });
+
+        cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> { // 使用ActivityResultContracts.StartActivityForResult创建ActivityResultLauncher
+            if (result.getResultCode() == RESULT_OK) {
+                if (result.getData() == null) {
+                    imageView.setImageURI(photoUri);                             // 设置ImageView显示拍照后的照片
+                } else {
+                    Bundle extras = result.getData().getExtras();
+                    Bitmap imageBitmap = (Bitmap) extras.get("data");
+                    imageView.setImageBitmap(imageBitmap);                       // 设置ImageView显示相机返回的缩略图
+                }
+            }
+        });
+    }
+
+    private void dispatchTakePictureIntent() {
+        File photoFile = null;
+        try {
+            photoFile = createImageFile();                                       // 创建用于存储拍照后照片的文件
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (photoFile != null) {
+            photoUri = FileProvider.getUriForFile(this, "com.example.cameraapp.fileprovider", photoFile); // 获取照片文件的URI
+
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                takePictureIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                takePictureIntent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                getContentResolver().takePersistableUriPermission(photoUri, Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION); // 请求临时权限
+            }
+
+            cameraLauncher.launch(takePictureIntent);                           // 启动拍照的Activity并通过ActivityResultLauncher获取结果
+        }
+    }
+
+    private File createImageFile() throws IOException {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File image = File.createTempFile(imageFileName, ".jpg", storageDir);    // 创建图片文件
+        return image;                                                          // 返回图片文件对象
+    }
+}
+
+```
+
+我目前设计的效果是，在主界面上有“拍照”和“相册”两个按钮，实现了点击拍照可以打开另一个页面，再次点击“take photo"，可以调用系统的拍照功能，但是拍下的照片无法储存到手机相册中，我想要将拍摄的照片以及拍摄时候的时间和经纬度存储在数据库中，以便在点击”相册“之后，可以在其中查看所有照片，以及可以按时间范围显示图片，点击图片缩略图之后，可以看到图片详情以及它的时间和经纬度。这之后该怎么一步一步实现呢
+
+
+
+> 1. **拍照和获取照片**：
+>    - 使用相应的编程语言和开发框架，实现点击“拍照”按钮时，打开相机功能，并允许用户拍照。
+>    - 获取用户拍摄的照片。您可以使用手机的相机API来实现这一部分。
+> 2. **获取时间和经纬度信息**：
+>    - 使用手机的定位服务获取用户的经纬度信息。您可以使用GPS或网络定位服务来获取位置信息。
+>    - 获取照片拍摄的时间戳，以便记录照片的拍摄时间。
+> 3. **保存照片到手机相册**：
+>    - 在拍照完成后，将照片保存到手机的相册。这通常涉及到文件操作，将照片复制或移动到相册的目录中。
+>    - 请注意，不同的操作系统和编程语言可能有不同的方法来实现此功能，因此需要根据您的具体开发环境来查找相关的文档和示例。
+> 4. **存储信息到数据库**：
+>    - 使用数据库管理系统（如SQLite、MySQL、MongoDB等），创建一个数据库来存储照片的信息，包括照片文件名、时间戳、经纬度等。
+>    - 在拍照后，将相关信息插入数据库中，以便后续查询和展示。
+> 5. **展示相册内容**：
+>    - 在主界面上，点击“相册”按钮时，您需要查询数据库以获取存储的照片信息。
+>    - 使用列表或网格视图来显示照片的缩略图。用户可以点击缩略图来查看大图。
+>    - 实现按时间范围查询功能，允许用户根据时间筛选照片。
+>    - 在点击照片缩略图时，显示照片详情，包括时间和经纬度信息。
+> 6. **展示地理位置信息**：
+>    - 可以使用地图API（如Google Maps或OpenStreetMap）来将经纬度信息转化为可读的地理位置，并显示在照片详情中。
+> 7. **用户界面优化**：
+>    - 确保用户界面友好和易用，添加必要的按钮和导航来实现您的需求。
 

@@ -24,6 +24,101 @@ SQL是一种标准化的语言，用于管理关系型数据库。它可以用�
 
 - [x] [Learn SQL In 60 Minutes](https://www.youtube.com/watch?v=p3qvj9hO_Bo)
 
+```mysql
+create database record_company;
+use record_company;
+create table bands(
+  id int not NULL auto_increment,
+  name varchar(255) NOT NULL,
+  primary key(id)
+);
+create table albums(
+  id int not NULL auto_increment,
+  name varchar(255) not NULL,
+  release_year int,
+  band_id int not NULL,
+  primary key(id),
+  foreign key (band_id) references bands(id)
+);
+
+insert into bands (name)
+values('Iron Maiden');
+
+insert into bands(name)
+values ('Deuce'),('Avenge Sevenfold'),('Ankor');
+
+select * from bands;
+
+select * from bands limit 2;
+
+select name from bands;
+
+select id as 'ID',name as 'Band Name' from bands;
+
+rename table bans to bands;
+
+select * from bands order by id desc;
+
+select * from bans order by name asc;
+
+insert into albums(name, release_year, band_id)
+values('The Number of the Beasts', 1985, 1),
+	  ('Power Slave', 1984, 2),
+      ('Nightmare', 2010, 3),
+      ('Test Album', NULL, 3);
+      
+insert into albums(name, release_year, band_id)
+values('Nightmare', 2018, 3);
+select * from albums;
+select distinct name from albums;
+
+update albums
+set release_year = 1982 
+where id = 1; 
+
+select * from albums
+where release_year < 2000;
+
+select * from albums
+where name like '%er%' or band_id = 3;
+
+select * from albums
+where release_year = 1984 and band_id = 2;
+
+select * from albums
+where release_year between 2000 and 2018;
+
+select * from albums
+where release_year is NULL;
+
+delete from albums where id = 4;
+
+select * from albums;
+
+update albums
+set id = 4 where id = 5;
+
+select * from bands
+ left join albums on bands.id = albums.band_id;
+
+select * from albums
+join bands on bands.id = albums.band_id;
+
+select avg(release_year) from albums;
+
+select band_id, count(band_id) from albums
+group by band_id;
+
+select b.name as band_name,count(a.id) as num_albums
+from bands as b
+left join albums as a on b.id = a.band_id
+where b.name = 'Deuce'
+group by b.id
+having num_albums = 1;
+
+delete from bands where id = 5;
+```
+
 
 
 #### CMU_01-RelationalModel
@@ -73,5 +168,64 @@ SQL是一种标准化的语言，用于管理关系型数据库。它可以用�
 
  
 
-![img](file:///C:\Users\08042x'l\AppData\Roaming\Tencent\Users\2260215531\QQ\WinTemp\RichOle\7WS~IC9N[]1H$55ZCFBTV$V.png)
+ 
 
+
+
+#### 11.2
+
+mysql重置密码
+
+临时密码**root@localhost**: #gOMRS,EL6h-
+
+
+
+
+
+#### 11.17
+
+##### Concurrency Control
+
+​	`txn:transaction`
+
+**ACID**
+
+![image-20231117222239346](%E6%95%B0%E6%8D%AE%E5%BA%93_daily.assets/image-20231117222239346.png)
+
+
+
+#### 11.23
+
+1.MYSQL bench导入txt/csv文件
+
+[csdn](https://blog.csdn.net/qq_55345814/article/details/126646147)
+
+
+
+2.#坑 [Error Code 1175. You are using safe update mode and you tried to update a table](https://www.cnblogs.com/jilili/p/14439189.html)
+
+> Solution:
+> set sql_safe_updates=off;
+>
+>  1、SET SQL_SAFE_UPDATES = 0;执行该命令更改mysql数据库模式。
+>  2、在where判断条件中跟上主键id  例如：delete from firstmysqldatabase.user where UserName='zhangsan' and ID>=0;
+
+
+
+3.**select 1**
+
+在 SQL 查询中，`SELECT 1` 是一个常见的用法，表示在结果集中选择一个常量值 `1`。这种写法通常用于 `EXISTS` 或 `NOT EXISTS` 子查询中，目的是检查是否存在满足特定条件的行，而不需要实际选择或返回实际的数据。
+
+例如，在 `EXISTS` 子查询中，`SELECT 1` 可以简单地检查条件是否为真（即是否存在满足条件的行），而不需要返回实际的数据。如果子查询返回至少一行结果，`EXISTS` 将会返回 `TRUE`，否则返回 `FALSE`。 
+
+```sql
+SELECT *
+FROM table1 t1
+WHERE EXISTS (
+    SELECT 1
+    FROM table2 t2
+    WHERE t1.column = t2.column
+);
+```
+
+这个查询会检查 `table1` 中是否存在满足条件 `table1.column = table2.column` 的行。在子查询中，`SELECT 1` 表示只需要确定是否存在这样的行，而不需要实际选择任何数据。

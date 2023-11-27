@@ -957,7 +957,7 @@ https://imgix.com/
 >    #my-element {
 >        color: red;
 >    }
->                
+>                                                       
 >    .my-class {
 >        color: blue;
 >    }
@@ -1048,3 +1048,839 @@ import jakarta.servlet.*
 > ●https://www.codingame.com/ playgrounds/6517/react-router-tutorial
 
 "D:\GameMaker.
+
+
+
+### *10.19*
+
+#### Vue3
+
+##### 一. Vue简介
+
+ Vue是于2013年(与React框架同年发布)推出的一个渐进式、**自底向上**的前端框架，它的作者叫尤雨溪。那么什么叫做**渐进式框架**呢？比较官方的说法就是：以Vue内核作为核心，随着业务的深入、需求的递增，可以使用其周边生态(vue-router、vuex、ssr等)深度应用到项目中。那么通俗上来讲：就是我们可以使用vue的部分功能不断的迭代掉我们项目中部分的功能，从表单提交到列表渲染，再到多路由应用，再到SSR等。
+
+ Vue主要具备以下几个特点：
+
+- 解耦视图和数据
+- 组件复用
+- 前端路由
+- 状态管理
+- 虚拟DOM
+
+Vue的学习不需要你具备 Rect、Angular的基础，只需要具备HTML、CSS、Javascript的基础即可。
+
+##### 二、Vue特点
+
+> Vue的特点
+>
+> (1) Vue 的核心库只关注视图层。
+> (2) 不仅易于上手，还便于与第三方库或既有项目整合。
+> (3) 遵循 MVVM模式 ，能够实现视图与模型的 双向绑定。
+>
+> - ==MVVM模式==：就是数据变化的时候, 页面会自动刷新, 页面变化的时候，数据也会自动变化.
+>
+> (4) 编码简洁，体积小，运行效率高，适合移动/PC端开发。
+> ————————————————
+
+##### 三、声明式渲染
+
+Vue.js 的核心是一个允许采用简洁的模板语法来**声明式**地将数据渲染进 DOM 的系统
+
+> 注意：
+>
+> 想让Vue工作，就必须创建一个 Vue实例，且要传入一个 配置对象
+> root容器里的代码依然符合html规范，只不过混入了一些特殊的Vue语法
+> root容器里的代码被称为 Vue模板
+> Vue实例与容器是一一对应的
+> 真实开发中只有一个Vue实例，并且会配合着组件一起使用
+> {{xxx}} 中的xxx要写js表达式，且xxx可以自动读取到data中的所有属性
+> 响应式 就是一旦data中的数据发生变化，那么模板中用到该数据的地方也会自动更新
+
+
+
+
+
+#### github-eg
+
+[vue-slider-component](https://github.com/NightCatSama/vue-slider-component/blob/master/README-CN.md#vue-slider-component)
+
+[vue2-calendar](https://blog.w3cub.com/vue2-calendar/?x-page=github)
+
+[A hackable slideshow framework built with Vue.js](https://github.com/Zulko/eagle.js)
+
+
+
+
+
+#### Runoob
+
+- vue安装
+- vue打包
+- vue创建项目
+  - vue init 
+  - vue create [options] <app-name>
+  - 使用可视化创建工具来创建项目：vue ui
+
+
+
+#### Youtobe
+
+https://www.youtube.com/watch?v=1GNsWa_EZdw (4h)
+
+
+
+
+
+### 10.22
+
+#### JSP 和 Servlet
+
+> 1. **用途**:
+>    - **JSP（JavaServer Pages）** 是一种基于文本文件的模板技术，允许在其中嵌入 Java 代码。JSP 文件通常包含 HTML 和 Java 代码，用于呈现 Web 页面。
+>    - **Servlet** 是一种 Java 类，它在服务器端处理 HTTP 请求和响应。Servlet 通常用于执行后端逻辑，如数据处理、业务逻辑和请求处理。
+> 2. **编程方式**:
+>    - **JSP** 更侧重于将 Java 代码嵌入到 HTML 页面中，使页面更易于维护和编写。
+>    - **Servlet** 更侧重于在 Java 类中处理请求和生成响应，通常需要编写更多的 Java 代码。
+> 3. **可维护性**:
+>    - **JSP** 更适用于前端开发人员，因为他们可以在页面中添加少量 Java 代码，而无需深入了解 Java 后端编程。
+>    - **Servlet** 更适用于后端开发人员，因为他们需要编写 Java 代码来处理请求和生成响应。
+> 4. **性能**:
+>    - 由于 JSP 在运行时会转换为 Servlet，因此性能方面没有太大区别。
+>    - Servlet 可能更适用于处理大量请求，因为它可以更精细地控制请求和响应的处理。
+> 5. **分工**:
+>    - 在实际的 Web 应用程序中，通常会同时使用 JSP 和 Servlet。JSP 用于生成 HTML 页面，Servlet 用于处理表单提交、执行业务逻辑等。
+> 6. **模板和控制器**:
+>    - JSP 可以看作是模板，用于视图层。
+>    - Servlet 通常用于控制器，处理请求的控制逻辑。
+
+
+
+### 10.23
+
+IDEA报错is not assignable to javax.servlet.Servlet
+
+> [csdn](https://blog.csdn.net/weixin_42172723/article/details/128882982?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-128882982-blog-98930944.235%5Ev38%5Epc_relevant_sort_base3&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-128882982-blog-98930944.235%5Ev38%5Epc_relevant_sort_base3&utm_relevant_index=1)
+>
+> 2.在web.xml里面引入的servlet.java没有extends HttpServlet
+>
+> ![image-20231023151031852](WEB_daily.assets/image-20231023151031852.png)
+>
+> 
+>
+> ![image-20231023151102255](WEB_daily.assets/image-20231023151102255.png)
+
+
+
+
+
+#### servlet板子
+
+```java
+package com.example.demo1;
+
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+
+import java.io.IOException;
+
+@WebServlet(name = "note", value = "/note")
+public class note extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+}
+```
+
+
+
+#坑 Cannot resolve taglib with uri http://java.sun.com/jsp/jstl/core
+
+> [csdn](https://blog.csdn.net/zhangzehai2234/article/details/50973095?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169805811416800197071864%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169805811416800197071864&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-50973095-null-null.142^v96^pc_search_result_base2&utm_term=Cannot%20resolve%20taglib%20with%20uri%20http%3A%2F%2Fjava.sun.com%2Fjsp%2Fjstl%2Fcore&spm=1018.2226.3001.4187)
+>
+> 解决方法：
+>
+> 在jsp开发的时候可能会碰到这个错误，其实这个问题很简单，只是缺少对于jsp支持的jar包，这两个jar包分别是：jstl.jar和standard.jar。
+>
+> 如果你使用的是maven的话，只需要在pom.xml文件里面加入这两个jar包即可
+>
+> ```xml
+> <span style="font-size:18px;"><dependency>
+>       <groupId>javax.servlet</groupId>
+>       <artifactId>jstl</artifactId>
+>       <version>${javax.servlet.jstl}</version>
+>     </dependency>
+>     <dependency>
+>       <groupId>taglibs</groupId>
+>       <artifactId>standard</artifactId>
+>       <version>${taglibs.standard}</version>
+>     </dependency></span>
+> ```
+>
+> 如果没有使用maven框架的话，只需要手动的下载这两个jar包，然后把他们放到项目的WEB-INF/lib文件夹，然后将jar包构建到项目路径中即可
+>
+> 2. [下载依赖包：](https://blog.csdn.net/shenhaibb_/article/details/83543373?ops_request_misc=&request_id=&biz_id=102&spm=1018.2226.3001.4187)
+>
+>    下载[link](http://www.java2s.com/Code/Jar/j/Downloadjstl12jar.htm)
+
+
+
+
+
+#### cmd显示目录树
+
+`tree /a`
+
+所有file: `tree /F`
+
+
+
+？不知道为什么外联css,显示不出渲染效果
+
+
+
+
+
+```jsp
+<li>读书：<%=surveyServlet.getInterestCount()["读书"]%> 人</li>
+<li>音乐：<%=surveyServlet.getInterestCount()["音乐"]%> 人</li>
+<li>体育：<%=surveyServlet.getInterestCount()["体育"]%> 人</li>
+<li>旅游：<%=surveyServlet.getInterestCount()["旅游"]%> 人</li>
+<li>游戏：<%=surveyServlet.getInterestCount()["游戏"]%> 人</li>
+<li>动漫：<%=surveyServlet.getInterestCount()["动漫"]%> 人</li>
+<li>美食：<%=surveyServlet.getInterestCount()["美食"]%> 人</li>
+<li>购物：<%=surveyServlet.getInterestCount()["购物"]%> 人</li>
+<li>摄影：<%=surveyServlet.getInterestCount()["摄影"]%> 人</li>
+<li>电影：<%=surveyServlet.getInterestCount()["电影"]%> 人</li>
+```
+
+
+
+#### Jstl.jar冲突
+
+#坑 java.lang.NoClassDefFoundError: javax/servlet/jsp/tagext/TagLibraryValidator
+
+[csdn](https://blog.csdn.net/qq_27130163/article/details/115665919)
+
+> 使用新版本Tomcat部署JSTL标签库的时候，**jstl的jar包无法找到以javax.servlet的依赖包**
+>
+> 至此问题已经非常明了了，**新版本Tomcat无法提供jstl的依赖**，而后笔者下**载了8.5版本的Tomcat重新部署发现问题解决**
+
+[解决2](https://www.cnblogs.com/mo-de/p/16812283.html)
+
+> 解决方案（一）：
+> 如果使用的是tomcat10版本需要将tomcat10换成tomcat8
+>
+> 解决方案（二）：
+> Tomcat10版本需要用:
+> jakarta.servlet.jsp.jstl-2.0.0.jar
+> jakarta.servlet.jsp.jstl-api-2.0.0.jar
+>
+> taglibs-standard-impl-1.2.5.jar
+>
+> taglibs-standard-spec-1.2.5.jar
+> 注：lib下只能有这两个jstl包，不能有其他的jstl包，不然依旧会报错，MAVEN导入不一定成功，一定要手动导入到lib下
+>
+> 下载地址
+>
+> [简书]https://www.jianshu.com/p/9bca6c2ba422
+>
+> **方法3**：
+>
+> JavaWeb的学习中，学到了JSTL，在网上找了几个相应的包后，一直在报错java.lang.NoClassDefFoundError: javax/servlet/jsp/tagext/TagLibraryValidator，
+>
+> 经过多番努力后才发现是因为我用的Tomcat10.0，用的jakarta.*软件包而不是javax.*软件包，故类似下图的jstl包是用不了的，下面的包是javax，用Tomcat10.0服务器运行的话，就会显示找不到包
+>
+> 要用下图的包才有效
+>
+> 下载地址如下：
+>  [jakarta.servlet.jsp.jstl-2.0.0.jar](https://links.jianshu.com/go?to=https%3A%2F%2Frepo.maven.apache.org%2Fmaven2%2Forg%2Fglassfish%2Fweb%2Fjakarta.servlet.jsp.jstl%2F2.0.0%2Fjakarta.servlet.jsp.jstl-2.0.0.jar)
+>
+> [jakarta.servlet.jsp.jstl-api-2.0.0.jar](https://links.jianshu.com/go?to=https%3A%2F%2Frepo.maven.apache.org%2Fmaven2%2Fjakarta%2Fservlet%2Fjsp%2Fjstl%2Fjakarta.servlet.jsp.jstl-api%2F2.0.0%2Fjakarta.servlet.jsp.jstl-api-2.0.0.jar)
+>
+> 或者用maven依赖：
+>
+> 
+
+
+
+#### 下载jar
+
+http://www.java2s.com/Code/Jar/j/jstl.htm
+
+
+
+### 10.24
+
+- [ ] 输入为空时的提醒
+
+
+
+
+
+芜湖！！6h，终于写完了（还是得先学啊呜呜呜，一直问gpt不如自己去断点调试）
+
+![image-20231024140901932](WEB_daily.assets/image-20231024140901932.png)
+
+
+
+
+
+### 10.27
+
+- 怎样给文件生成一个点击直接下载的链接？
+
+### 10.29
+
+java下载文件
+
+**tips：**
+
+>1.将资源文件夹添加在resource目录下
+>
+>2.在pom.xml <build> </build>里添加：
+>
+>​	
+>
+>```xml
+><build>
+>    <resources>
+>        <resource>
+>            <directory>src/main/resources</directory>
+>        </resource>
+>        <resource>
+>            <directory>src/main/resources/res_me</directory>
+>        </resource>
+>    </resources>
+></build>
+>```
+
+
+
+### 11.3
+
+
+
+1.~~登录界面，输入昵称之后可以保存~~（创建一个用户对象
+
+2.显示聊天界面(定时刷新)（聊天内容格式如下：“xxx"对”yyy"说：（聊天内容））（如何将聊天区域做成一个页面框架 IFrame，设置一个定时器，单独定时刷新显示新发送的消息）
+
+3.显示操作区
+
+（包含：1.一个用户列表包括：所有人，张三，李四
+
+​		 	2.发送聊天内容的文本框：需要发言的内容
+
+​		 	3.按钮：发送 ，按钮：退出聊天室）
+
+
+
+要求：
+
+1、私聊信息只能自己和私聊对象看见
+2、显示内容里可以显示：~~xxx进入聊天室~~，xxx退出聊天室
+3、~~用户没有访问聊天室的会自动退出（如果页面长时间没刷新，就认为已退出（关闭了浏览器））~~
+
+（2023.11.10实现新增）
+
+4、要求登录之前要进行==图形选择验证==（给两张图片选择指定内容（eg.猫或狗），给九张图片，选择包含指定内容的全部图）
+
+5、使用cookie，可以让用户选择是否下次==自动登录==
+
+（目前一个浏览器只能注册一次昵称，其他昵称无法登入）
+
+
+
+#坑
+
+【关于idea运行html页面出现乱码的解决办法 
+
+> 1.http://t.csdnimg.cn/kVu0s
+>
+> 2.在head标签里添加`<meta charset="UTF-8">`
+
+
+
+
+
+细节：
+
+1. **消息处理**：
+   - 创建一个消息类，包括发送者、接收者、消息内容和时间戳等信息。
+   
+   - 在数据库中创建用于存储消息的表，其中包括列用于保存发送者、接收者、消息内容和时间戳。
+   
+   - 创建Java类来处理消息的发送和接收，将消息保存到数据库中并从数据库中检索消息。
+   
+   - 使用**Ajax**或WebSocket等技术在前端和后端之间传递消息。
+   
+     > 消息处理可以通过使用Java的Servlet和会话来实现，而不必使用数据库。以下是一个示例步骤，演示如何创建一个简单的消息处理系统：
+     >
+     > **1. 创建消息类（Message.java）：**
+     >
+     > ```java
+     > import java.util.Date;
+     > 
+     > public class Message {
+     >     private String sender;
+     >     private String receiver;
+     >     private String content;
+     >     private Date timestamp;
+     > 
+     >     // 构造函数和访问方法
+     > 
+     >     // 省略 getter 和 setter 方法
+     > }
+     > ```
+     >
+     > **2. 创建一个表格来存储消息（MessageTable.java）：**
+     >
+     > ```java
+     > import java.util.ArrayList;
+     > import java.util.List;
+     > 
+     > public class MessageTable {
+     >     private List<Message> messages = new ArrayList<>();
+     > 
+     >     public void addMessage(Message message) {
+     >         messages.add(message);
+     >     }
+     > 
+     >     public List<Message> getMessages() {
+     >         return messages;
+     >     }
+     > }
+     > ```
+     >
+     > **3. 创建Java类来处理消息的发送和接收（MessageHandler.java）：**
+     >
+     > ```java
+     > import java.io.IOException;
+     > import java.io.PrintWriter;
+     > import java.util.List;
+     > import javax.servlet.ServletException;
+     > import javax.servlet.annotation.WebServlet;
+     > import javax.servlet.http.HttpServlet;
+     > import javax.servlet.http.HttpServletRequest;
+     > import javax.servlet.http.HttpServletResponse;
+     > 
+     > @WebServlet("/MessageHandler")
+     > public class MessageHandler extends HttpServlet {
+     >     private MessageTable messageTable;
+     > 
+     >     @Override
+     >     public void init() throws ServletException {
+     >         messageTable = new MessageTable();
+     >     }
+     > 
+     >     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     >         String sender = request.getParameter("sender");
+     >         String receiver = request.getParameter("receiver");
+     >         String content = request.getParameter("content");
+     > 
+     >         Message message = new Message(sender, receiver, content, new Date());
+     >         messageTable.addMessage(message);
+     >     }
+     > 
+     >     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     >         List<Message> messages = messageTable.getMessages();
+     > 
+     >         response.setContentType("application/json");
+     >         PrintWriter out = response.getWriter();
+     >         out.println("[");
+     >         for (Message message : messages) {
+     >             out.println("{");
+     >             out.println("\"sender\": \"" + message.getSender() + "\",");
+     >             out.println("\"receiver\": \"" + message.getReceiver() + "\",");
+     >             out.println("\"content\": \"" + message.getContent() + "\",");
+     >             out.println("\"timestamp\": \"" + message.getTimestamp() + "\"");
+     >             out.println("},");
+     >         }
+     >         out.println("]");
+     >     }
+     > }
+     > ```
+     >
+     > **4. 使用Ajax在前端和后端之间传递消息：**
+     >
+     > 在前端页面中，你可以使用Ajax来发送和接收消息。以下是一个示例，如何使用Ajax发送消息：
+     >
+     > ```javascript
+     > // 发送消息
+     > function sendMessage() {
+     >     var sender = "Alice"; // 你可以从页面中获取发送者和接收者
+     >     var receiver = "Bob";
+     >     var content = document.getElementById("messageInput").value;
+     > 
+     >     var xhr = new XMLHttpRequest();
+     >     xhr.open("POST", "MessageHandler", true);
+     >     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     >     xhr.send("sender=" + sender + "&receiver=" + receiver + "&content=" + content);
+     > }
+     > 
+     > // 获取消息
+     > function getMessages() {
+     >     var xhr = new XMLHttpRequest();
+     >     xhr.open("GET", "MessageHandler", true);
+     >     xhr.onreadystatechange = function () {
+     >         if (xhr.readyState === 4 && xhr.status === 200) {
+     >             var messages = JSON.parse(xhr.responseText);
+     >             // 处理接收到的消息
+     >         }
+     >     };
+     >     xhr.send();
+     > }
+     > ```
+     >
+     > 这个示例演示了如何使用Ajax发送消息到`MessageHandler` Servlet，并从中获取消息。
+     >
+     > 请注意，这是一个简单的示例，实际的实现可能会更复杂，包括用户身份验证、消息过滤等。此外，你也可以考虑使用WebSocket等技术来实现实时消息传递，而不是轮询方式。
+   
+     
+   
+2. **用户状态和会话管理**：
+   - 在用户登录时，将用户信息存储在会话中，以便在后续请求中访问。
+   
+   - 使用会话管理来跟踪用户的在线状态。可以使用会话超时来标记用户退出聊天室。
+   
+   - 创建一个用户列表，显示在线用户的信息（例如，用户名）。
+   
+   - 实现用户进入聊天室和退出聊天室时，向聊天室中添加相应的消息，如“xxx进入聊天室”或“xxx退出聊天室”。
+   
+     > 使用**ServletContext,  Ajax**
+     >
+     > 或者websocket
+   
+3. **私聊**：
+   
+   - 实现私聊功能，确保只有发送者和接收者可以看到私聊消息。
+   - 可以使用消息中的信息来区分私聊和公共消息，例如，将接收者字段设置为私聊对象的用户名。
+   
+4. **用户退出**：
+   - 当用户退出聊天室时，从会话中清除用户信息。
+   
+     > 在web.xml文件里设置超时时间
+     >
+     > ```xml
+     > <session-config>
+     >     <session-timeout>10</session-timeout>
+     > </session-config>
+     >     
+     > ```
+     >
+     > 
+   
+   - 在用户退出聊天室时发送相应的退出消息。
+   
+     
+   
+5. **定时刷新和前端交互**：
+   - 使用JavaScript定时器（例如，`setInterval`）定期获取新消息，并将其显示在聊天窗口中。
+   - 处理前端按钮的点击事件，例如，发送消息和退出聊天室。
+
+
+
+
+
+TODO
+
+> 1. **用户登录**：ok
+>    - 创建登录界面（HTML和JSP）用于输入昵称。
+>    - 在后端使用Java Servlet接收登录请求，验证用户并将用户信息存储到数据库或会话中。
+>    
+> 2. **显示聊天界面**：  ok
+>    
+>    - 创建聊天页面（HTML和JSP）用于显示聊天内容。
+>    - 使用JavaScript设置定时器，以一定时间间隔定时刷新聊天内容。
+>    - 在后端，创建Java Servlet来提供获取聊天消息的API，该Servlet从**本地**中获取消息并返回给前端。
+>    
+> 3. **操作区**：
+>    
+>    - 创建操作区（HTML和JSP）包括用户列表、发送文本框、发送按钮、退出按钮等。 **ok**
+>    - 使用JavaScript处理按钮的点击事件，例如，发送消息和退出聊天室。       **ok**
+>    - 实现私聊的逻辑，确保只有发送者和接收者可以看到私聊消息。
+>    
+> 4. **用户状态管理**：
+>    
+>    - 使用会话管理或其他方式来跟踪用户的在线状态。 ok
+>    - 当用户进入或退出聊天室时，==发送相应的消息给其他用户。==
+>    
+> 5. **超时退出**：
+>    
+>    - 实现一个机制，以检测用户是否长时间没有刷新页面（或关闭了浏览器），如果是，则将其标记为已退出。 
+>    
+>      ok   `<session-config>`
+>    
+> 6. **用户进入和退出消息**：
+>    
+>    - 当用户进入聊天室或退出聊天室时，向聊天内容中添加相应的消息，如“xxx进入聊天室”或“xxx退出聊天室”。(怎么呈现给所有用户)
+
+
+
+
+
+
+
+### 11.10
+
+#### ChatRoom2.0
+
+>  rev.
+>
+>  1、修改登陆界面，实现带图片验证的登陆。要求必须在选择正确动物种类的图片后正常登陆。注意图片出现的随机性 ，以及图片的链接不得暴露其真实文件名和路径。
+>
+>  2、未正常登陆，不得进入聊天室或访问聊天室页面。
+>
+>  3、在一定时间内曾经登陆过的用户再次访问登陆页面，将用曾经登陆过的昵称信息自动填充登陆界面的昵称文本框（cookies存储）。
+>
+>  4、可以正常地私聊，可以正常在聊天室中潜水，可以正常显示当前实际真实在线用户，无论是用户正常退出聊天室还是关闭浏览器后自动退出聊天室。
+>
+>  **==tips:==**
+>
+> >  a、可以维护一个在线用户信息表 
+> >
+> > b、在登陆成功后，该在线用户信息表增加一个新用户
+> >
+> >  c、在退出聊天信息的请求servlet里删除当前退出的用户
+> >
+> >  d、可以在处理刷新聊天信息请求的servlet中更新用户信息表中的每个sessionID对应的lastAccessedTime 
+> >
+> > e、可以在处理刷新当前在线用户信息请求的servlet中先计算是否有已经超时的用户，有则删除，然后再返回当前所有在线用户信息给前端显示。
+>
+>  5、可以参考在课堂上讲解的学生例子。例子代码如附件所示。但能够用自己的方式编码实现。 
+>
+> 6、请用至少三种浏览器测试：如chrome，edge,idea内置，firefox等。
+
+
+
+cookie使用
+
+[JavaWeb使用Cookie实现10天免登录功能（自动登录）](https://blog.csdn.net/gubkub/article/details/133687526)
+
+
+
+#### Hexo 博客框架
+
+
+
+key:
+
+16D%43&10x5
+
+![image-20231112210935596](WEB_daily.assets/image-20231112210935596.png)
+
+
+
+参考教程
+
+> 1.[hexo安装及使用](https://blog.csdn.net/cat_bayi/article/details/128725230)
+>
+> 2.[安装Hexo博客并部署到GitHub或云服务器（细节教程，越过各种坑）](https://blog.csdn.net/qq_43187818/article/details/104468721?ops_request_misc=&request_id=&biz_id=102&utm_term=Hexo%E5%AE%89%E8%A3%85&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-104468721.nonecase&spm=1018.2226.3001.4187)
+>
+> 3.[Hexo Fluid 用户手册](https://hexo.fluid-dev.com/docs/guide/#%E8%A6%86%E7%9B%96%E9%85%8D%E7%BD%AE)
+>
+> 4.[Hexo+GitHub搭建个人博客教程(第3篇  更换主题)](https://blog.csdn.net/qq_42540989/article/details/95458020?ops_request_misc=&request_id=&biz_id=102&utm_term=Hexo%E7%BB%93%E5%90%88github%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-4-95458020.142^v96^pc_search_result_base2&spm=1018.2226.3001.4187)
+>
+> 
+
+报错：
+
+> 1.[hexo更换主题后出现问题：WARN No layout: index.html](https://blog.csdn.net/weixin_44460555/article/details/111866191)
+>
+> 
+>
+> 2.[部署hexo遇到报错ERROR Deployer not found: git的解决办法](https://blog.csdn.net/qq_41688840/article/details/125826614)
+>
+> - 解决办法：
+>
+>   这是因为没有安装`hexo-deployer-git`插件,在**站点目录**下输入下面的命令安装插件就好了。执行下面这行命令
+>
+>   ```shell
+>    npm install hexo-deployer-git --save
+>   ```
+>
+> 
+>
+> 
+>
+> 3.为什么部署发送失败：
+>
+> INFO  Copying files from extend dirs... fatal: detected dubious ownership in repository at 'D:/nodejs_project/hexo_project/hexo-starter/.deploy_git' 'D:/nodejs_project/hexo_project/hexo-starter/.deploy_git' is owned by:        'S-1-5-32-544' but the current user is:        'S-1-5-21-321378158-797752792-357320137-1001' To add an exception for this directory, call:
+>
+> ==GPT:==
+>
+> 这段报错信息是由于 Hexo 在执行部署（`hexo d`）的过程中遇到了问题，具体问题表现为部署到 Git 仓库失败。错误信息中最主要的原因是权限问题。
+>
+> 在报错信息中这一部分描述了问题所在：
+>
+> ```
+> fatal: detected dubious ownership in repository at 'D:/nodejs_project/hexo_project/hexo-starter/.deploy_git'
+> ```
+>
+> 这表示 Git 成功地发现了一个拥有可疑所有权的存储库，并且接下来的错误信息也反映了这一点:
+>
+> ```
+> 'D:/nodejs_project/hexo_project/hexo-starter/.deploy_git' is owned by: 'S-1-5-32-544' but the current user is: 'S-1-5-21-321378158-797752792-357320137-1001'
+> ```
+>
+> 这个问题的解决方法是通过运行以下命令为指定目录添加安全例外：
+>
+> ```
+> git config --global --add safe.directory D:/nodejs_project/hexo_project/hexo-starter/.deploy_git
+> ```
+>
+> 解决这个问题后重新执行`hexo d`命令来尝试重新部署内容。
+>
+> 总体来说，这个问题是由于 Git 仓库的权限问题造成的，通过进行上述的配置可以让 Hexo 在执行部署时正常运行。如果问题还存在，建议查看 Hexo 官方文档中的故障排除页面，并尝试寻求相关解决方案。
+
+
+
+重启命令
+
+> hexo clean
+>
+> hexo g
+>
+> hexo s
+>
+> -->
+>
+>  hexo clean && hexo g && hexo s
+
+hexo常用命令如下：
+
+> npm install hexo -g #安装Hexo
+> npm update hexo -g #升级
+> hexo init #初始化博客
+>
+> hexo n "我的博客" == hexo new "我的博客" #新建文章
+> hexo g == hexo generate #生成
+> hexo s == hexo server #启动服务预览
+> hexo d == hexo deploy #部署
+>
+> hexo server #Hexo会监视文件变动并自动更新，无须重启服务器
+> hexo server -s #静态模式
+> hexo server -p 5000 #更改端口
+> hexo server -i 192.168.1.1 #自定义 IP
+> hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
+
+
+
+### 11.14
+
+在我的代码基础上修改， 实现点击注册或登录之后，在其下方显示图片验证（由两幅图片组成 ，例如猫和狗，以及一句提示语句，“请选择猫”，按照提示语做出正确选择之后，方可进行form的跳转请求）请问该怎么设计：
+
+
+
+```
+style="display: none;"
+```
+
+Windows.onload
+
+
+
+##### maven仓库
+
+https://mvnrepository.com/
+
+
+
+
+
+https://www.ciie.org/zbh/apk/ciie_app.apk
+
+
+
+### 11.17
+
+[什么是javabean，它与java的区别是什么？](https://blog.csdn.net/weixin_34380296/article/details/85491884)
+
+> JavaBean 是一种JAVA语言写成的可重用组件。为写成JavaBean，类必须是具体的和公共的，并且具有无参数的构造器。JavaBean 通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。众所周知，属性名称符合这种模式，其他Java 类可以通过自身机制发现和操作这些JavaBean 属性。
+>
+> 换句话说，javabean就是一个java的类，只不过这个类你要按上面提到的一些规则来写，比如必须是公共的啊，无参构造啊等等，按这些规则写了之后，这个javabean可以在程序里被方便的重用，使开发效率提高。
+
+
+
+`implements java.io.Serializable`
+
+- 作用
+
+> 使一个类能够被序列化。当一个类实现了 `Serializable` 接口，就具备了将其对象转换为字节流的能力，以便可以在网络上传输、保存到文件中，或者在Java应用程序内部各个组件之间传递对象。
+>
+> ​	当一个类实现 `Serializable` 接口时，该类的对象就可以使用Java中的序列化工具（比如ObjectOutputStream）将其转换为字节流，从而可以在网络上传输或者保存到文件中。同时，也可以使用反序列化工具（比如ObjectInputStream）将字节流转换为该类的对象。
+
+
+
+ ？刷新一次就重复提交
+
+![image-20231117200807501](WEB_daily.assets/image-20231117200807501.png)
+
+
+
+在之前作业的基础上顺利完成了基础功能，芜湖！
+
+
+
+![image-20231117211428632](WEB_daily.assets/image-20231117211428632.png)
+
+
+
+
+
+### 11.22
+
+
+
+#### HEXO固定操作
+
+1.重启命令
+
+> hexo clean
+>
+> hexo g
+>
+> hexo s
+>
+> -->
+>
+> hexo clean && hexo g && hexo s
+
+
+
+2.github同步
+
+
+
+最后多一步 hexo d //部署
+
+hexo clean && hexo g && hexo d
+
+
+
+### 11.27
+
+- [x] 处理 在form的text输入enter自动提交（如何保留换行？）
+
+> 用textarea
+
+- [x] 数据库如何保存换行符（目前只能读取第一行留言）
+
+> ```java
+> String content = rs.getString("Content").replace("\n", "<br>"); 
+> // 将Java中的换行符转换为HTML的换行标签
+> message.setContent(content);
+> ```
+
+
+
+#坑 javax.el.PropertyNotFoundException:类型[XXXX]上找不到属性[XXXX]
+
+[csdn](https://blog.csdn.net/qq_45792455/article/details/118194767)
+
