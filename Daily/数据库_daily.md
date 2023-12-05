@@ -229,3 +229,88 @@ WHERE EXISTS (
 ```
 
 这个查询会检查 `table1` 中是否存在满足条件 `table1.column = table2.column` 的行。在子查询中，`SELECT 1` 表示只需要确定是否存在这样的行，而不需要实际选择任何数据。
+
+
+
+#### 11.28
+
+删除外键依赖
+
+> ALTER TABLE `test`.`tc` 
+> DROP FOREIGN KEY `tc_ibfk_1`,
+> DROP FOREIGN KEY `tc_ibfk_2`;
+>
+> ALTER TABLE `test`.`tc` 
+> DROP INDEX `Cno` ,
+> DROP PRIMARY KEY;
+>
+> ALTER TABLE `test`.`tc` 
+> ADD CONSTRAINT `tc_ibfk_1`
+> FOREIGN KEY ()
+> REFERENCES `test`.`teacher` (),
+> ADD CONSTRAINT `tc_ibfk_2`
+> FOREIGN KEY ()
+> REFERENCES `test`.`course` ();
+
+#### 11.30
+
+##### trigger
+
+MySQL 触发器
+
+- 触发器是与表有关的数据库对象，可以在 insert、 update、 delete 之前或之后触发并执行触发器中定义的 SQL 语句。
+- 这种特性可以协助应用系统在数据库端确保数据的完整性、日志记录、数据校验等操作。
+- 使用别名 NEW 和 OLD 来引用触发器中发生变化的内容记录。
+- 触发器分类 
+
+| 触发器类型      | OLD                            | NEW                           |
+| --------------- | ------------------------------ | ----------------------------- |
+| INSERT 型触发器 | 无 (因为插入前无数据)          | NEW表示将要或者已经新增的数据 |
+| UPDATE 型触发器 | OLD表示修改之前的数据          | NEW表示将要或已经修改后的数据 |
+| DELETE 型触发器 | OLD 表示将要或者已经删除的数据 | 无 (因为删除后状态无数据)     |
+
+命令行方式
+
+```mysql
+-- 命令行方式
+-- 先更改语句结束符号
+delimiter ##  -- 切换自定义结束符号，在可视化操作页面不需要，在命令行中创建触发器则需要。
+-- 再创建触发器
+CREATE TRIGGER trigger_name AFTER|BEFORE INSERT|UPDATE|DELETE ON table_name
+FOR EACH ROW -- 行级触发器
+BEGIN
+	... -- 具体执行语句
+END
+## -- 代表创建触发器语句结束，这样就不会执行到分号;的时候暂停执行了。
+delimiter ; -- 恢复mysql默认语句结束符号
+```
+
+在MySQL中，要删除一个已存在的触发器，您可以使用以下的SQL语句：
+
+```mysql
+sqDROP TRIGGER IF EXISTS 触发器名称;
+```
+
+
+tips：
+
+- 只有==表==才支持触发器，视图不支持（临时表也不 支持）。
+- 触发器==不能更新或覆盖==。为了修改一个触发器，必须先删除它， 然后再重新创建。
+
+- !!!注意 `else if`和`elseif`的区别
+
+
+
+#### 12.2
+
+事务控制语句
+
+> 1、BEGIN 或 START TRANSACTION：显式地开启一个事务。
+>
+> 2、COMMIT 或 COMMIT WORK：提交事务，并使已对数据库进行的所有修改变为永久性的。
+>
+> 3、ROLLBACK 或 ROLLBACK WORK：回滚会结束用户的事务，并撤销正在进行的所有未提交的修改。
+>
+> 4、SAVEPOINT S1：使用 SAVEPOINT 允许在事务中创建一个回滚点，一个事务中可以有多个SAVEPOINT；“S1”代表回滚点名称。
+>
+> 5、ROLLBACK TO [SAVEPOINT] S1：把事务回滚到标记点。

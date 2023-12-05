@@ -957,7 +957,7 @@ https://imgix.com/
 >    #my-element {
 >        color: red;
 >    }
->                                                       
+>                                                          
 >    .my-class {
 >        color: blue;
 >    }
@@ -1243,20 +1243,7 @@ public class note extends HttpServlet {
 
 ？不知道为什么外联css,显示不出渲染效果
 
-
-
-
-
 ```jsp
-<li>读书：<%=surveyServlet.getInterestCount()["读书"]%> 人</li>
-<li>音乐：<%=surveyServlet.getInterestCount()["音乐"]%> 人</li>
-<li>体育：<%=surveyServlet.getInterestCount()["体育"]%> 人</li>
-<li>旅游：<%=surveyServlet.getInterestCount()["旅游"]%> 人</li>
-<li>游戏：<%=surveyServlet.getInterestCount()["游戏"]%> 人</li>
-<li>动漫：<%=surveyServlet.getInterestCount()["动漫"]%> 人</li>
-<li>美食：<%=surveyServlet.getInterestCount()["美食"]%> 人</li>
-<li>购物：<%=surveyServlet.getInterestCount()["购物"]%> 人</li>
-<li>摄影：<%=surveyServlet.getInterestCount()["摄影"]%> 人</li>
 <li>电影：<%=surveyServlet.getInterestCount()["电影"]%> 人</li>
 ```
 

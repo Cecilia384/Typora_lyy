@@ -336,7 +336,7 @@
 >           if (requestCode == 1 && resultCode == RESULT_OK) {
 >           if (data != null && data.hasExtra("selectedDate")) {
 >               String selectedDate = data.getStringExtra("selectedDate");
->                               
+>                                     
 >               // 更新UI以显示所选日期
 >               TextView textView = findViewById(R.id.textView);
 >               textView.setText("Selected Date: " + selectedDate);
@@ -719,3 +719,25 @@ public class Start extends AppCompatActivity {
 > 7. **用户界面优化**：
 >    - 确保用户界面友好和易用，添加必要的按钮和导航来实现您的需求。
 
+
+
+### 12.3
+
+- [x] 如何设置头像为圆形
+
+[way1](https://blog.51cto.com/u_12947/6837652)（失败了
+
+[github](https://github.com/jhbxyz/ArticleRecord/blob/master/articles/%E8%87%AA%E5%AE%9A%E4%B9%89View/2%E5%9C%86%E5%BD%A2%E5%A4%B4%E5%83%8F.md)（~~还是不行，感觉不是代码的问题唉~~
+
+（！！成功啦）
+
+- [ ] 编辑资料的界面
+- [ ] 按钮选中切换字体颜色的效果
+- [ ] 课程滚动视图
+- [x] 动态滚动视图
+- [ ] 文章的详情页
+- [ ] 上传头像的功能
+- [x] 背景墙
+- [ ] 下拉刷新
+- [x] 磨砂的效果（需要高斯模糊）---》变成半透明吧
+- [ ] ？ SSL peer shut down incorrectly
