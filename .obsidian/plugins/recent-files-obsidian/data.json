@@ -9,20 +9,28 @@
       "path": "Daily/数据库_daily.md"
     },
     {
-      "basename": "2023下半年",
-      "path": "Daily/2023下半年.md"
+      "basename": "Android_note",
+      "path": "Daily/Android_note.md"
+    },
+    {
+      "basename": "支付宝小程序开发",
+      "path": "Daily/支付宝小程序开发.md"
+    },
+    {
+      "basename": "_Index_of_Daily",
+      "path": "Daily/_Index_of_Daily.md"
+    },
+    {
+      "basename": "GO_学习",
+      "path": "Daily/GO_学习.md"
     },
     {
       "basename": "2023日记",
       "path": "Daily/2023日记.md"
     },
     {
-      "basename": "Android_note",
-      "path": "Daily/Android_note.md"
-    },
-    {
-      "basename": "_Index_of_Daily",
-      "path": "Daily/_Index_of_Daily.md"
+      "basename": "2023下半年",
+      "path": "Daily/2023下半年.md"
     },
     {
       "basename": "0_daily2023",
@@ -55,10 +63,6 @@
     {
       "basename": "tool网站",
       "path": "0重要!待完成/tool网站.md"
-    },
-    {
-      "basename": "GO_学习",
-      "path": "Daily/GO_学习.md"
     },
     {
       "basename": "100",
@@ -95,10 +99,6 @@
     {
       "basename": "小tips",
       "path": "algorithms/小tips.md"
-    },
-    {
-      "basename": "record",
-      "path": "2023下半/Web/record.md"
     },
     {
       "basename": "Record",

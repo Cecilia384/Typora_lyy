@@ -11,17 +11,9 @@
             "id": "61fca16017092b3a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "a6a49af8a3e56975",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily/WEB_daily.md",
+                "file": "Daily/数据库_daily.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -29,13 +21,13 @@
             }
           },
           {
-            "id": "5f95e19c66299a8a",
+            "id": "c0004d68e823256b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily/2023下半年.md",
-                "mode": "source",
+                "file": "Daily/WEB_daily.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -108,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7f1eb056c90d4d1e",
@@ -203,14 +196,30 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "a6a49af8a3e56975",
+  "active": "c0004d68e823256b",
   "lastOpenFiles": [
     "Daily/数据库_daily.md",
-    "Daily/2023日记.md",
-    "Daily/WEB_daily.md",
-    "Daily/2023下半年.md",
+    "2023下半/Web/code/_Index_of_code.md",
+    "2023下半/Web/code/图书借阅网站.md",
+    "2023下半/Web/_Index_of_Web.md",
+    "2023下半/php.md",
     "Daily/Android_note.md",
+    "Daily/支付宝小程序开发.md",
     "Daily/_Index_of_Daily.md",
+    "Daily/GO_学习.md",
+    "Daily/2023日记.md",
+    "Daily/2023下半年.md",
+    "Daily/WEB_daily.md",
+    "Daily/WEB_daily.assets/image-20231212220734226.png",
+    "Daily/WEB_daily.assets/image-20231212220217632.png",
+    "Daily/WEB_daily.assets/image-20231212220114587.png",
+    "Daily/WEB_daily.assets/image-20231212215945053.png",
+    "Daily/WEB_daily.assets/image-20231212215827711.png",
+    "Daily/WEB_daily.assets/image-20231212215800212.png",
+    "Daily/WEB_daily.assets/image-20231212215757114.png",
+    "Daily/WEB_daily.assets/image-20231211190137623.png",
+    "Daily/WEB_daily.assets/image-20231211190141092-17023892498463.png",
+    "Daily/WEB_daily.assets/image-20231212212225961.png",
     "0_Xiaoli/0_daily2023.md",
     "0_Xiaoli/a_daily2022.md",
     "0_Xiaoli/2022日记.md",
@@ -219,7 +228,6 @@
     "notebook/Django.md",
     "Daily/移动应用开发/Android_note.md",
     "0重要!待完成/tool网站.md",
-    "Daily/GO_学习.md",
     "100.md",
     "2023-09-23.md",
     "未命名.canvas",
@@ -227,13 +235,6 @@
     "2023-09-22.md",
     "2023-09-30.md",
     "notebook/java相关/java.md",
-    "游戏背景资料/素材绘制.md",
-    "游戏背景资料/项目计划.md",
-    "algorithms/小tips.md",
-    "游戏背景资料/_Index_of_游戏背景资料.md",
-    "2023下半/Web/record.md",
-    "picture/Pasted image 20230921142950.png",
-    "picture/Pasted image 20230921142726.png",
     "p1018.pdf",
     "notebook/os习题.pdf"
   ]

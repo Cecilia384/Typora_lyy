@@ -45,7 +45,7 @@
 >
 > - Docker 容器比虚拟机更轻量级、更快速、更易于部署和管理，因为它们共享操作系统内核和硬件资源。而虚拟机则可以提供更高的隔离性和安全性，因为它们模拟了整个操作系统和硬件环境
 >
->   
+> 
 >
 > 关于Docker的信息和**教程**？
 >
@@ -595,8 +595,8 @@ Node Package Manager
   >
   > ```js
   > (async ()=>{
-  >     const { nanoid } = await import('nanoid');
-  >     console.log(nanoid(5));//调用的部分
+  >  const { nanoid } = await import('nanoid');
+  >  console.log(nanoid(5));//调用的部分
   > })();
   > ```
 
@@ -632,8 +632,8 @@ const readlineSync = require('readline-sync');
 >
 > ````js
 > {
->     value: 'tennis',
->     name: 'tennis'
+>  value: 'tennis',
+>  name: 'tennis'
 > }
 > ````
 >
@@ -643,8 +643,8 @@ const readlineSync = require('readline-sync');
 >
 > ```js
 > {
->     key: 'R',
->     value: 'red'
+>  key: 'R',
+>  value: 'red'
 > }
 > ```
 >
@@ -653,8 +653,8 @@ const readlineSync = require('readline-sync');
 > **transformer**：在输入的信息后添加的提示信息，可以把它当成input的placeholder，对最终答案没有影响，是一个函数。
 > when：是一个函数，参数是answer，当返回值是true时，该问题才会生效并且进行提问。
 > **pageSize**：分页器，给list、rawList,、expand、checkbox列表使用，输入数字（代表每页多少个选项），当数字小于列表总选项时，会进行分页。
-> 
->   prefix**：问题前缀。
+>
+> prefix**：问题前缀。
 > suffix：问题后缀。
 > **askAnswered**：Boolean值，默认情况下为false，同样的答案字段如果已经存在则不会发起提问，但是如果为true，则会强制提问，并且新的答案会覆盖之前的。
 > **loop**：Boolean值，默认值为true。通常和pageSize使用，为true时，列表到最后一页继续前进的话会返回第一页。为false时，则不会。
@@ -862,7 +862,7 @@ Lab作业：
 >
 > 以上都是通过标准的 JavaScript 函数来完成DOM操作。这些函数用于从 HTML 元素的内容提取和设置值，以及获取、创建和附加 HTML 元素到 DOM 结构。通过使用这些函数，我们可以根据用户的输入和交互来构建动态的聊天室界面。
 >
->  
+> 
 
 ### *10.9*
 
@@ -957,7 +957,7 @@ https://imgix.com/
 >    #my-element {
 >        color: red;
 >    }
->                                                          
+>       
 >    .my-class {
 >        color: blue;
 >    }
@@ -1212,15 +1212,15 @@ public class note extends HttpServlet {
 >
 > ```xml
 > <span style="font-size:18px;"><dependency>
->       <groupId>javax.servlet</groupId>
->       <artifactId>jstl</artifactId>
->       <version>${javax.servlet.jstl}</version>
->     </dependency>
->     <dependency>
->       <groupId>taglibs</groupId>
->       <artifactId>standard</artifactId>
->       <version>${taglibs.standard}</version>
->     </dependency></span>
+>    <groupId>javax.servlet</groupId>
+>    <artifactId>jstl</artifactId>
+>    <version>${javax.servlet.jstl}</version>
+>  </dependency>
+>  <dependency>
+>    <groupId>taglibs</groupId>
+>    <artifactId>standard</artifactId>
+>    <version>${taglibs.standard}</version>
+>  </dependency></span>
 > ```
 >
 > 如果没有使用maven框架的话，只需要手动的下载这两个jar包，然后把他们放到项目的WEB-INF/lib文件夹，然后将jar包构建到项目路径中即可
@@ -1287,7 +1287,7 @@ public class note extends HttpServlet {
 > 要用下图的包才有效
 >
 > 下载地址如下：
->  [jakarta.servlet.jsp.jstl-2.0.0.jar](https://links.jianshu.com/go?to=https%3A%2F%2Frepo.maven.apache.org%2Fmaven2%2Forg%2Fglassfish%2Fweb%2Fjakarta.servlet.jsp.jstl%2F2.0.0%2Fjakarta.servlet.jsp.jstl-2.0.0.jar)
+> [jakarta.servlet.jsp.jstl-2.0.0.jar](https://links.jianshu.com/go?to=https%3A%2F%2Frepo.maven.apache.org%2Fmaven2%2Forg%2Fglassfish%2Fweb%2Fjakarta.servlet.jsp.jstl%2F2.0.0%2Fjakarta.servlet.jsp.jstl-2.0.0.jar)
 >
 > [jakarta.servlet.jsp.jstl-api-2.0.0.jar](https://links.jianshu.com/go?to=https%3A%2F%2Frepo.maven.apache.org%2Fmaven2%2Fjakarta%2Fservlet%2Fjsp%2Fjstl%2Fjakarta.servlet.jsp.jstl-api%2F2.0.0%2Fjakarta.servlet.jsp.jstl-api-2.0.0.jar)
 >
@@ -1333,18 +1333,18 @@ java下载文件
 >
 >2.在pom.xml <build> </build>里添加：
 >
->​	
+>
 >
 >```xml
 ><build>
->    <resources>
->        <resource>
->            <directory>src/main/resources</directory>
->        </resource>
->        <resource>
->            <directory>src/main/resources/res_me</directory>
->        </resource>
->    </resources>
+><resources>
+>   <resource>
+>       <directory>src/main/resources</directory>
+>   </resource>
+>   <resource>
+>       <directory>src/main/resources/res_me</directory>
+>   </resource>
+></resources>
 ></build>
 >```
 
@@ -1362,9 +1362,9 @@ java下载文件
 
 （包含：1.一个用户列表包括：所有人，张三，李四
 
-​		 	2.发送聊天内容的文本框：需要发言的内容
-
-​		 	3.按钮：发送 ，按钮：退出聊天室）
+		 	2.发送聊天内容的文本框：需要发言的内容
+	
+		 	3.按钮：发送 ，按钮：退出聊天室）
 
 
 
@@ -1415,14 +1415,14 @@ java下载文件
      > import java.util.Date;
      > 
      > public class Message {
-     >     private String sender;
-     >     private String receiver;
-     >     private String content;
-     >     private Date timestamp;
+     >  private String sender;
+     >  private String receiver;
+     >  private String content;
+     >  private Date timestamp;
      > 
-     >     // 构造函数和访问方法
+     >  // 构造函数和访问方法
      > 
-     >     // 省略 getter 和 setter 方法
+     >  // 省略 getter 和 setter 方法
      > }
      > ```
      >
@@ -1433,15 +1433,15 @@ java下载文件
      > import java.util.List;
      > 
      > public class MessageTable {
-     >     private List<Message> messages = new ArrayList<>();
+     >  private List<Message> messages = new ArrayList<>();
      > 
-     >     public void addMessage(Message message) {
-     >         messages.add(message);
-     >     }
+     >  public void addMessage(Message message) {
+     >      messages.add(message);
+     >  }
      > 
-     >     public List<Message> getMessages() {
-     >         return messages;
-     >     }
+     >  public List<Message> getMessages() {
+     >      return messages;
+     >  }
      > }
      > ```
      >
@@ -1459,38 +1459,38 @@ java下载文件
      > 
      > @WebServlet("/MessageHandler")
      > public class MessageHandler extends HttpServlet {
-     >     private MessageTable messageTable;
+     >  private MessageTable messageTable;
      > 
-     >     @Override
-     >     public void init() throws ServletException {
-     >         messageTable = new MessageTable();
-     >     }
+     >  @Override
+     >  public void init() throws ServletException {
+     >      messageTable = new MessageTable();
+     >  }
      > 
-     >     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     >         String sender = request.getParameter("sender");
-     >         String receiver = request.getParameter("receiver");
-     >         String content = request.getParameter("content");
+     >  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     >      String sender = request.getParameter("sender");
+     >      String receiver = request.getParameter("receiver");
+     >      String content = request.getParameter("content");
      > 
-     >         Message message = new Message(sender, receiver, content, new Date());
-     >         messageTable.addMessage(message);
-     >     }
+     >      Message message = new Message(sender, receiver, content, new Date());
+     >      messageTable.addMessage(message);
+     >  }
      > 
-     >     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     >         List<Message> messages = messageTable.getMessages();
+     >  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     >      List<Message> messages = messageTable.getMessages();
      > 
-     >         response.setContentType("application/json");
-     >         PrintWriter out = response.getWriter();
-     >         out.println("[");
-     >         for (Message message : messages) {
-     >             out.println("{");
-     >             out.println("\"sender\": \"" + message.getSender() + "\",");
-     >             out.println("\"receiver\": \"" + message.getReceiver() + "\",");
-     >             out.println("\"content\": \"" + message.getContent() + "\",");
-     >             out.println("\"timestamp\": \"" + message.getTimestamp() + "\"");
-     >             out.println("},");
-     >         }
-     >         out.println("]");
-     >     }
+     >      response.setContentType("application/json");
+     >      PrintWriter out = response.getWriter();
+     >      out.println("[");
+     >      for (Message message : messages) {
+     >          out.println("{");
+     >          out.println("\"sender\": \"" + message.getSender() + "\",");
+     >          out.println("\"receiver\": \"" + message.getReceiver() + "\",");
+     >          out.println("\"content\": \"" + message.getContent() + "\",");
+     >          out.println("\"timestamp\": \"" + message.getTimestamp() + "\"");
+     >          out.println("},");
+     >      }
+     >      out.println("]");
+     >  }
      > }
      > ```
      >
@@ -1501,27 +1501,27 @@ java下载文件
      > ```javascript
      > // 发送消息
      > function sendMessage() {
-     >     var sender = "Alice"; // 你可以从页面中获取发送者和接收者
-     >     var receiver = "Bob";
-     >     var content = document.getElementById("messageInput").value;
+     >  var sender = "Alice"; // 你可以从页面中获取发送者和接收者
+     >  var receiver = "Bob";
+     >  var content = document.getElementById("messageInput").value;
      > 
-     >     var xhr = new XMLHttpRequest();
-     >     xhr.open("POST", "MessageHandler", true);
-     >     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-     >     xhr.send("sender=" + sender + "&receiver=" + receiver + "&content=" + content);
+     >  var xhr = new XMLHttpRequest();
+     >  xhr.open("POST", "MessageHandler", true);
+     >  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     >  xhr.send("sender=" + sender + "&receiver=" + receiver + "&content=" + content);
      > }
      > 
      > // 获取消息
      > function getMessages() {
-     >     var xhr = new XMLHttpRequest();
-     >     xhr.open("GET", "MessageHandler", true);
-     >     xhr.onreadystatechange = function () {
-     >         if (xhr.readyState === 4 && xhr.status === 200) {
-     >             var messages = JSON.parse(xhr.responseText);
-     >             // 处理接收到的消息
-     >         }
-     >     };
-     >     xhr.send();
+     >  var xhr = new XMLHttpRequest();
+     >  xhr.open("GET", "MessageHandler", true);
+     >  xhr.onreadystatechange = function () {
+     >      if (xhr.readyState === 4 && xhr.status === 200) {
+     >          var messages = JSON.parse(xhr.responseText);
+     >          // 处理接收到的消息
+     >      }
+     >  };
+     >  xhr.send();
      > }
      > ```
      >
@@ -1556,9 +1556,9 @@ java下载文件
      >
      > ```xml
      > <session-config>
-     >     <session-timeout>10</session-timeout>
+     >  <session-timeout>10</session-timeout>
      > </session-config>
-     >     
+     > 
      > ```
      >
      > 
@@ -1580,32 +1580,32 @@ TODO
 > 1. **用户登录**：ok
 >    - 创建登录界面（HTML和JSP）用于输入昵称。
 >    - 在后端使用Java Servlet接收登录请求，验证用户并将用户信息存储到数据库或会话中。
->    
+>
 > 2. **显示聊天界面**：  ok
->    
+>
 >    - 创建聊天页面（HTML和JSP）用于显示聊天内容。
 >    - 使用JavaScript设置定时器，以一定时间间隔定时刷新聊天内容。
 >    - 在后端，创建Java Servlet来提供获取聊天消息的API，该Servlet从**本地**中获取消息并返回给前端。
->    
+>
 > 3. **操作区**：
->    
+>
 >    - 创建操作区（HTML和JSP）包括用户列表、发送文本框、发送按钮、退出按钮等。 **ok**
 >    - 使用JavaScript处理按钮的点击事件，例如，发送消息和退出聊天室。       **ok**
 >    - 实现私聊的逻辑，确保只有发送者和接收者可以看到私聊消息。
->    
+>
 > 4. **用户状态管理**：
->    
+>
 >    - 使用会话管理或其他方式来跟踪用户的在线状态。 ok
 >    - 当用户进入或退出聊天室时，==发送相应的消息给其他用户。==
->    
+>
 > 5. **超时退出**：
->    
+>
 >    - 实现一个机制，以检测用户是否长时间没有刷新页面（或关闭了浏览器），如果是，则将其标记为已退出。 
->    
+>
 >      ok   `<session-config>`
->    
+>
 > 6. **用户进入和退出消息**：
->    
+>
 >    - 当用户进入聊天室或退出聊天室时，向聊天内容中添加相应的消息，如“xxx进入聊天室”或“xxx退出聊天室”。(怎么呈现给所有用户)
 
 
@@ -1630,19 +1630,19 @@ TODO
 >
 >  **==tips:==**
 >
-> >  a、可以维护一个在线用户信息表 
-> >
-> > b、在登陆成功后，该在线用户信息表增加一个新用户
-> >
-> >  c、在退出聊天信息的请求servlet里删除当前退出的用户
-> >
-> >  d、可以在处理刷新聊天信息请求的servlet中更新用户信息表中的每个sessionID对应的lastAccessedTime 
-> >
-> > e、可以在处理刷新当前在线用户信息请求的servlet中先计算是否有已经超时的用户，有则删除，然后再返回当前所有在线用户信息给前端显示。
+>  >  a、可以维护一个在线用户信息表 
+>  >
+>  >  b、在登陆成功后，该在线用户信息表增加一个新用户
+>  >
+>  >  c、在退出聊天信息的请求servlet里删除当前退出的用户
+>  >
+>  >  d、可以在处理刷新聊天信息请求的servlet中更新用户信息表中的每个sessionID对应的lastAccessedTime 
+>  >
+>  >  e、可以在处理刷新当前在线用户信息请求的servlet中先计算是否有已经超时的用户，有则删除，然后再返回当前所有在线用户信息给前端显示。
 >
 >  5、可以参考在课堂上讲解的学生例子。例子代码如附件所示。但能够用自己的方式编码实现。 
 >
-> 6、请用至少三种浏览器测试：如chrome，edge,idea内置，firefox等。
+>  6、请用至少三种浏览器测试：如chrome，edge,idea内置，firefox等。
 
 
 
@@ -1738,7 +1738,7 @@ key:
 >
 > -->
 >
->  hexo clean && hexo g && hexo s
+> hexo clean && hexo g && hexo s
 
 hexo常用命令如下：
 
@@ -1801,7 +1801,7 @@ https://www.ciie.org/zbh/apk/ciie_app.apk
 
 > 使一个类能够被序列化。当一个类实现了 `Serializable` 接口，就具备了将其对象转换为字节流的能力，以便可以在网络上传输、保存到文件中，或者在Java应用程序内部各个组件之间传递对象。
 >
-> ​	当一个类实现 `Serializable` 接口时，该类的对象就可以使用Java中的序列化工具（比如ObjectOutputStream）将其转换为字节流，从而可以在网络上传输或者保存到文件中。同时，也可以使用反序列化工具（比如ObjectInputStream）将字节流转换为该类的对象。
+> 	当一个类实现 `Serializable` 接口时，该类的对象就可以使用Java中的序列化工具（比如ObjectOutputStream）将其转换为字节流，从而可以在网络上传输或者保存到文件中。同时，也可以使用反序列化工具（比如ObjectInputStream）将字节流转换为该类的对象。
 
 
 
@@ -1853,7 +1853,7 @@ hexo clean && hexo g && hexo d
 
 ### 11.27
 
-- [x] 处理 在form的text输入enter自动提交（如何保留换行？）
+- [ ] 处理 在form的text输入enter自动提交（如何保留换行？）
 
 > 用textarea
 
@@ -1870,4 +1870,135 @@ hexo clean && hexo g && hexo d
 #坑 javax.el.PropertyNotFoundException:类型[XXXX]上找不到属性[XXXX]
 
 [csdn](https://blog.csdn.net/qq_45792455/article/details/118194767)
+
+
+
+
+
+
+
+### 12.7
+
+[IDEA2023只能创建jdk17和21的springboot项目解决](https://www.cnblogs.com/cutesheep/p/17874402.html)
+
+解决：
+
+> 将serverurl修改即可
+> https://start.spring.io --> https://start.aliyun.com
+
+ 
+
+### 12.11
+
+#### vue基本操作
+
+> - 创建vue项目
+> - 运行vue `npm run serve`
+> - element框架
+
+##### MyBaits
+
+**==POJO==**(Plain Ordinary Java Obejct)
+
+ 添加依赖
+
+ ![image-20231211190137623](C:/Users/08042x%27l/AppData/Roaming/Typora/draftsRecover/2023-12-11%20WEB_daily%20173839.assets/image-20231211190137623.png)![image-20231211190141092](WEB_daily.assets/image-20231211190141092-17023892498463.png)
+
+前端调试工具
+
+api-post
+
+### 12.12
+
+#### ==Lombok==
+
+> 一个Java库，通过简单的注解方式，能够很大程度地减少 Java 代码中的样板代码（boilerplate code）。它主要用于减少Java代码重复的工作，提高开发效率，主要包括以下几个方面的功能：
+>
+> 1. **消除样板代码**： Lombok 可以通过在类上添加一些注解（如`@Getter`、`@Setter`、`@ToString`等），自动生成对应的getter、setter方法及toString方法，使得我们在编写实体类时不再需要手动编写这些大量重复的代码。
+> 2. **简化构造器**： 有了 Lombok，通过注解`@AllArgsConstructor`、`@NoArgsConstructor`和`@RequiredArgsConstructor`等，即可快速地生成相应的构造器。
+> 3. **简化日志记录**： Lombok 提供了一个`@Slf4j`注解，可以自动生成在类中引入 Slf4j 日志对象的代码，无需手动添加。
+> 4. **其他功能**： Lombok 还提供了许多其他注解如`@Data`、`@Builder`等，可以生成hashCode 和 equals 方法，以及建造者模式。
+
+
+
+
+
+==@**Autowired**==
+
+> 是一个注释，它可以对类成员变量、方法及构造函数进行标注，让 spring 完成 bean 自动装配的工作。
+> @Autowired 默认是按照类去匹配，配合 @[Qualifier](https://so.csdn.net/so/search?q=Qualifier&spm=1001.2101.3001.7020) 指定按照名称去装配 bean。
+>
+> - [作用](https://blog.csdn.net/MaNong125/article/details/122628775?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170236263916800188554211%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=170236263916800188554211&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-122628775-null-null.142^v96^pc_search_result_base2&utm_term=%40autowired%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%9C%E7%94%A8&spm=1018.2226.3001.4187)
+
+
+
+VUE
+
+MVVM模式（Model-View-ViewModel）
+
+
+
+#### ==Axios== 
+
+发送网络请求
+
+- 发送GET请求
+
+   ![image-20231212212225961](WEB_daily.assets/image-20231212212225961.png)
+
+- 发送POST请求
+
+  ![image-20231212212444882](WEB_daily.assets/image-20231212212444882-17023892339892.png)
+
+ 
+
+#### 跨域问题
+
+ 
+
+![image-20231212214926517](WEB_daily.assets/image-20231212214926517-17023892304691.png)
+
+解决：
+
+> - CORS (Cross-Origin Resource Sharing）是由W3C制定的一种跨域资源共享
+>   技术标准，其目的就是为了解决前端的跨域请求。
+> - CORS可以在不破坏即有规则的情况下，通过后端服务器实现CORS接口，从而
+>   实现跨域通信。
+> - CORS将请求分为两类:简单请求和非简单请求，分别对跨域通信提供了支持。
+
+简单请求：
+
+![image-20231212215800212](WEB_daily.assets/image-20231212215800212.png)
+
+![image-20231212215827711](WEB_daily.assets/image-20231212215827711.png)
+
+
+
+非简单请求
+
+![image-20231212215945053](WEB_daily.assets/image-20231212215945053.png)
+
+
+
+![image-20231212220114587](WEB_daily.assets/image-20231212220114587.png)
+
+SpringBoot 配饰 CORS
+
+![image-20231212220217632](WEB_daily.assets/image-20231212220217632.png)
+
+
+
+与VUE整合
+
+![image-20231212220734226](WEB_daily.assets/image-20231212220734226.png)
+
+
+
+
+
+
+
+
+
+
 

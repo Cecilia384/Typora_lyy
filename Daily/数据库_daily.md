@@ -314,3 +314,51 @@ tips：
 > 4、SAVEPOINT S1：使用 SAVEPOINT 允许在事务中创建一个回滚点，一个事务中可以有多个SAVEPOINT；“S1”代表回滚点名称。
 >
 > 5、ROLLBACK TO [SAVEPOINT] S1：把事务回滚到标记点。
+
+
+
+
+
+#### 12.7
+
+数据库SQL语句
+
+```mysql
+CREATE TABLE `catering_system`.`account` (
+  `username` VARCHAR(20) NOT NULL,
+  `keyword` VARCHAR(20) NOT NULL,
+  `identity` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`username`));
+```
+
+
+
+#### 12.14
+
+#坑 mysql中declare报错
+
+[相同报错](https://www.coder.work/article/2502429)
+
+> ​		            			**最佳答案**
+>
+> 好像[you cannot declare and use variables outside triggers/procedures/functions or events](https://stackoverflow.com/a/12954385/2186023) .因此，您也不能通过围绕它编写 `BEGIN...END` 来解决这个问题。
+>
+> 由于您在一个选择语句中需要两个不同的 ID 值，您可以将其包装到一个存储过程中(这应该可以避免无法声明变量的问题)或者只使用 `MAX` -最终插入语句中两列中的 ID 值。 *(这当然假设您在两个表中启用了`auto_increment` 或至少升序 ID)*
+>
+> 所以本质上，如果您将整个代码替换为:
+>
+> ```mysql
+> INSERT INTO doses (CPS, ground, total) VALUES (10, 10, 10);
+> 
+> INSERT INTO places (x, y, z, speed) VALUES (10, 10, 10, 10);
+> 
+> INSERT INTO measurements (time, place, note, dose, id_dataset)
+> VALUES ('Test', (SELECT MAX(ID) FROM doses), 'test', (SELECT MAX(ID) FROM places), 17);
+> ```
+>
+> 您还应该将其包装在事务中，以确保在此期间没有插入其他 ID。
+>
+> 
+>
+> 关于mysql - DECLARE 语法错误，我们在Stack Overflow上找到一个类似的问题： 						[ 								https://stackoverflow.com/questions/25620614/ 							](https://stackoverflow.com/questions/25620614/)
+
